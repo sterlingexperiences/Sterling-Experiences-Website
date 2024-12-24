@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        openSans: ["Open Sans", "sans-serif"],
+        ebGaramond: ["EB Garamond", "serif"],
+      },
       animation: {
         blob: "blob 7s infinite",
         "fade-in": "fade-in 1s ease-in forwards",
