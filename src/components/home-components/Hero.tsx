@@ -2,10 +2,10 @@ const Hero = () => {
   return (
     <div className="flex">
       <div className="w-[60%] font-openSans">
-        <h1 className="font-[600] text-[56px] leading-[78px] tracking-[-4%] font-ebGaramond">
+        <h1 className="font-[600] text-[56px] leading-[78px] tracking-[-0.04em] font-ebGaramond">
           Creating Sterling Experiences
         </h1>
-        <p className="mt-[10px] font-[400] text-[24px] leading-[33px] tracking-[-2%]">
+        <p className="mt-[10px] font-[400] text-[24px] leading-[33px] tracking-[-0.02em]">
           Shaping the Future of Corporate Events.
         </p>
         <button>Schedule free consultation</button>
