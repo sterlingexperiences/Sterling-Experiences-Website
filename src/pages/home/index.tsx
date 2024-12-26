@@ -5,21 +5,25 @@ import Hero from "../../components/home-components/Hero";
 import OurExpertise from "../../components/home-components/OurExpertise";
 import Portfolio from "../../components/home-components/Portfolio";
 import Testimonials from "../../components/home-components/Testimonials";
+import NavBar from "../../components/nav";
 import Layout from "../../layout/Layout";
 
 const Home = () => {
   return (
-    <Layout>
-      <div className="bg-[#F6F1E5]">
-        <Hero />
-        <Testimonials />
-        <FromFunfairs />
-        <OurExpertise />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </div>
-    </Layout>
+    <>
+      <Layout>
+        <div className="bg-[#F6F1E5]">
+          <NavBar />
+          <Hero />
+          <Testimonials />
+          <FromFunfairs />
+          <OurExpertise />
+          <Portfolio />
+          <Contact />
+        </div>
+      </Layout>
+      <Footer />
+    </>
   );
 };
 
