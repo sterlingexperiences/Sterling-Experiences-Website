@@ -1,9 +1,15 @@
+import Header from "../../components/about-components/Header";
+import Layout from "../../layout/Layout";
+
 const About = () => {
   return (
-    <div>
-      About
-      <h1>About page</h1>
-    </div>
+    <>
+      <Layout>
+        <div className="bg-[#F6F1E5]">
+          <Header />
+        </div>
+      </Layout>
+    </>
   );
 };
 
