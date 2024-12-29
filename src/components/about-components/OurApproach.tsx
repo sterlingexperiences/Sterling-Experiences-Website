@@ -2,24 +2,31 @@ import { StarIcon } from "../../assets/icons";
 
 const OurApproach = () => {
   return (
-    <div className="flex justify-between items-center pt-[56px] pb-[90px] bg-red-300">
-      <div className="w-[50%] flex items-center justify-between mr-[100px]">
-        <h1 className="font-ebGaramond text-[36px] font-[500] leading-[43px] tracking-[-0.04em]">
-          What our clients says
-        </h1>
-        <StarIcon />
+    <div className="flex justify-between items-center">
+      <div className="w-[60%] flex items-center justify-between mr-[100px]">
+        <div className="space-y-[24px]">
+          <h1 className="font-ebGaramond text-[56px] text-[#800080] font-[600] leading-[78px] tracking-[-0.04em]">
+            Our Approach
+          </h1>
+          <p className="font-openSans text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
+            We believe in a collaborative approach, working closely with our
+            clients to understand their specific needs and preferences. We are
+            committed to delivering personalized and memorable experiences that
+            exceed expectations.
+          </p>
+          <p className="font-openSans text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
+            We are committed to delivering exceptional service and creating
+            unforgettable events. Our team of experienced professionals will
+            work tirelessly to ensure that your event is a resounding success.
+          </p>
+        </div>
+        <div className="shrink-0">
+          <StarIcon />
+        </div>
       </div>
 
-      <div className="w-[50%] font-openSans">
-        <p className="font-[400] text-[18px] leading-[25px] tracking-[-0.02em]">
-          Joy is quite innovative in the execution of the project, and she does
-          it effortlessly. If you desire that exceptional and excellent delivery
-          on your events, I recommend Joy and her team of professionals at
-          Sterling Experiences. With Sterling Experiences, experience peace!!
-        </p>
-        <h2 className="font-[600] text-[18px] leading-[25px] tracking-[-0.02em] mt-[15px]">
-          Timothy Olalekan, 3IR Prints
-        </h2>
+      <div className="w-[40%] font-openSans">
+        <img src="" className="w-full h-[370px] bg-red-500" alt="" />
       </div>
     </div>
   );
