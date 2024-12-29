@@ -1,20 +1,16 @@
-import Header from "../../components/about-components/Header";
-import MeetTheFounder from "../../components/about-components/MeetTheFounder";
-import OurApproach from "../../components/about-components/OurApproach";
 import Contact from "../../components/home-components/Contact";
 import Footer from "../../components/home-components/Footer";
 import NavBar from "../../components/nav";
+import PastEvents from "../../components/portfolio-components/PastEvents";
 import Layout from "../../layout/Layout";
 
-const About = () => {
+const Portfolio = () => {
   return (
     <>
       <Layout>
         <div className="bg-[#F6F1E5]">
           <NavBar />
-          <Header />
-          <OurApproach />
-          <MeetTheFounder />
+          <PastEvents />
           <Contact />
         </div>
       </Layout>
@@ -23,4 +19,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Portfolio;

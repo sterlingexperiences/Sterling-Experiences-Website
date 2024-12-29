@@ -1,21 +1,17 @@
-import Header from "../../components/about-components/Header";
-import MeetTheFounder from "../../components/about-components/MeetTheFounder";
-import OurApproach from "../../components/about-components/OurApproach";
+import Info from "../../components/contact-component/Info";
 import Contact from "../../components/home-components/Contact";
 import Footer from "../../components/home-components/Footer";
 import NavBar from "../../components/nav";
 import Layout from "../../layout/Layout";
 
-const About = () => {
+const ContactUs = () => {
   return (
     <>
       <Layout>
         <div className="bg-[#F6F1E5]">
           <NavBar />
-          <Header />
-          <OurApproach />
-          <MeetTheFounder />
           <Contact />
+          <Info />
         </div>
       </Layout>
       <Footer />
@@ -23,4 +19,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default ContactUs;

@@ -69,7 +69,7 @@ const Contact = () => {
             name="message"
             id="message"
             cols={30}
-            rows={10}
+            rows={5}
           ></textarea>
         </div>
 

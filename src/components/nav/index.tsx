@@ -1,5 +1,6 @@
 import NavLayout from "../../layout/NavLayout";
 import Logo from "../../assets/sterling-experiences-logo.png";
+import { Link } from "react-router";
 
 const NavBar = () => {
   return (
@@ -20,11 +21,21 @@ const NavBar = () => {
           </div>
 
           <div className="w-fit space-x-[40px] text-[#0E0E12] flex font-[400] text-[16px] leading-[24px]">
-            <li className={`list-none hover:cursor-pointer`}>HOME</li>
-            <li className={`list-none hover:cursor-pointer`}>ABOUT US </li>
-            <li className={`list-none hover:cursor-pointer`}>SERVICES </li>
-            <li className={`list-none hover:cursor-pointer`}>PORTFOLIO</li>
-            <li className={`list-none hover:cursor-pointer`}>CONTACT</li>
+            <Link to={"/"}>
+              <li className={`list-none hover:cursor-pointer`}>HOME</li>
+            </Link>
+            <Link to={"/about-us"}>
+              <li className={`list-none hover:cursor-pointer`}>ABOUT US </li>
+            </Link>
+            <Link to={"/services"}>
+              <li className={`list-none hover:cursor-pointer`}>SERVICES </li>
+            </Link>
+            <Link to={"/portfolio"}>
+              <li className={`list-none hover:cursor-pointer`}>PORTFOLIO</li>
+            </Link>
+            <Link to={"/contact-us"}>
+              <li className={`list-none hover:cursor-pointer`}>CONTACT</li>
+            </Link>
           </div>
 
           <div className="w-fit flex items-center justify-between space-x-6 rounded-[16px] border border-[#800080]">
