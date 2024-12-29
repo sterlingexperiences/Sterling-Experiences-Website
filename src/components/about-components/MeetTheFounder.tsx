@@ -8,7 +8,7 @@ const MeetTheFounder = () => {
         Meet Joy Steer Omoro
       </h1>
 
-      <div className="flex items-center justify-center gap-[32px] mt-[24px]">
+      <div className="flex items-center justify-center gap-[32px] mt-[24px] border border-[#800080] bg-[#FFFFFF] rounded-[16px] px-[90px] py-[90px]">
         <div className="w-[30%]">
           <img src={Joy} className="w-full h-full" alt="" />
         </div>

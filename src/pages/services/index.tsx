@@ -1,18 +1,20 @@
-import Header from "../../components/about-components/Header";
-import MeetTheFounder from "../../components/about-components/MeetTheFounder";
-import OurApproach from "../../components/about-components/OurApproach";
 import Contact from "../../components/home-components/Contact";
 import Footer from "../../components/home-components/Footer";
+import Header from "../../components/services-components/Header";
+import WhatWeDo from "../../components/services-components/WhatWeDo";
 import Layout from "../../layout/Layout";
 
-const About = () => {
+const Services = () => {
   return (
     <>
       <Layout>
         <div className="bg-[#F6F1E5]">
           <Header />
-          <OurApproach />
-          <MeetTheFounder />
+        </div>
+      </Layout>
+      <WhatWeDo />
+      <Layout>
+        <div className="bg-[#F6F1E5]">
           <Contact />
         </div>
       </Layout>
@@ -21,4 +23,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Services;
