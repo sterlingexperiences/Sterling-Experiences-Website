@@ -36,3 +36,11 @@ body {
 .animation-delay-4000 {
   animation-delay: 4000ms;
 }
+
+.whatWeDo_bg {
+  background: url("/what-we-do.png") no-repeat center center/cover;
+}
+
+.about_bg {
+  background: url("/about-header.png") no-repeat center center/cover;
+}
