@@ -11,7 +11,7 @@ const Testimonials = () => {
       </div>
 
       <div className="w-[50%] font-openSans">
-        <p className="font-[400] text-[18px] leading-[25px] tracking-[-0.02em]">
+        <p className="font-[400] text-[18px] text-balance leading-[25px] tracking-[-0.02em]">
           Joy is quite innovative in the execution of the project, and she does
           it effortlessly. If you desire that exceptional and excellent delivery
           on your events, I recommend Joy and her team of professionals at

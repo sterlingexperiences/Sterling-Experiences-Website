@@ -1,4 +1,7 @@
 import { ArrowRight } from "../../assets/icons";
+import PortfolioOne from "../../assets/images/portfolio-one.png";
+import PortfolioTwo from "../../assets/images/portfolio-two.png";
+import PortfolioThree from "../../assets/images/portfolio-three.png";
 
 const Portfolio = () => {
   return (
@@ -8,9 +11,9 @@ const Portfolio = () => {
       </h1>
 
       <div className="flex items-center justify-center gap-[24px] py-[89px] px-[60px] border border-[#800080] bg-[#FFFFFF] rounded-[16px]">
-        <img src="" className="w-full h-[386px] bg-red-500" alt="" />
-        <img src="" className="w-full h-[386px] bg-red-500" alt="" />
-        <img src="" className="w-full h-[386px] bg-red-500" alt="" />
+        <img src={PortfolioOne} alt="Portfolio One" />
+        <img src={PortfolioTwo} alt="Portfolio Two" />
+        <img src={PortfolioThree} alt="Portfolio Three" />
       </div>
 
       <div className="flex items-center justify-center mt-[30px]">
