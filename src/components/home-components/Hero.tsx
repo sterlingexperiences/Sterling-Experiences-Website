@@ -2,7 +2,7 @@ import HeroImage from "../../assets/images/hero-image.png";
 
 const Hero = () => {
   return (
-    <div className="flex justify-between items-center mx-auto px-[30px] py-[70px]">
+    <div className="flex justify-between items-center py-[70px]">
       <div className="font-openSans">
         <h1 className="font-[600] text-[56px] leading-[78px] tracking-[-0.04em] font-ebGaramond">
           Creating Sterling Experiences
