@@ -5,8 +5,8 @@ import { Link, NavLink } from "react-router";
 const NavBar = () => {
   return (
     <div
-      className="
-      top-0 right-0 left-0 z-50 w-full mx-auto items-center hidden lg:flex"
+    // className="
+    // top-0 right-0 left-0 z-50 w-full mx-auto items-center hidden lg:flex fixed"
     >
       <NavLayout bg="#F6F1E5">
         <nav className="w-full flex justify-between items-center py-[8px] px-[48px] rounded-[16px] border border-[#800080]">

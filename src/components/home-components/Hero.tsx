@@ -1,7 +1,9 @@
+import HeroImage from "../../assets/images/hero-image.png";
+
 const Hero = () => {
   return (
-    <div className="flex">
-      <div className="w-[60%] font-openSans">
+    <div className="flex justify-between items-center mx-auto px-[30px] py-[70px]">
+      <div className="font-openSans">
         <h1 className="font-[600] text-[56px] leading-[78px] tracking-[-0.04em] font-ebGaramond">
           Creating Sterling Experiences
         </h1>
@@ -11,8 +13,8 @@ const Hero = () => {
         <button>Schedule free consultation</button>
       </div>
 
-      <div className="w-[40%]">
-        <div className="w-full h-[370px] bg-[#800080B2]" />
+      <div className="">
+        <img src={HeroImage} alt="Hero Image" />
       </div>
     </div>
   );
