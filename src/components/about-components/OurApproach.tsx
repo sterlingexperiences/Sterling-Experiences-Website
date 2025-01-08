@@ -1,10 +1,11 @@
 import { StarIcon } from "../../assets/icons";
+import OurApproachImage from "../../assets/images/our-approach-image.png";
 
 const OurApproach = () => {
   return (
     <div className="flex justify-between items-center">
-      <div className="w-[60%] flex items-center justify-between mr-[100px]">
-        <div className="space-y-[24px]">
+      <div className="flex items-center justify-between">
+        <div className="space-y-[24px] max-w-[660px]">
           <h1 className="font-ebGaramond text-[56px] text-[#800080] font-[600] leading-[78px] tracking-[-0.04em]">
             Our Approach
           </h1>
@@ -25,8 +26,8 @@ const OurApproach = () => {
         </div>
       </div>
 
-      <div className="w-[40%] font-openSans">
-        <img src="" className="w-full h-[370px] bg-red-500" alt="" />
+      <div className="font-openSans">
+        <img src={OurApproachImage} alt="" />
       </div>
     </div>
   );
