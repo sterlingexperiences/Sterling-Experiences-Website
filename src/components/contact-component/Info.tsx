@@ -1,3 +1,5 @@
+import ContactImage from "../../assets/images/contact.png";
+
 import {
   InstagramIcon,
   LinkedinIcon,
@@ -9,7 +11,7 @@ const Info = () => {
   return (
     <div className="flex items-center gap-[80px] border border-[#800080] rounded-[16px] bg-[#FFFFFF] px-[70px] py-[50px] mb-[60px]">
       <div>
-        <img src="" className="w-[500px] h-[489px] bg-red-500" alt="" />
+        <img src={ContactImage} alt="" />
       </div>
 
       <div className="space-y-[30px]">
