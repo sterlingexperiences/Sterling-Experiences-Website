@@ -11,9 +11,21 @@ const Portfolio = () => {
       </h1>
 
       <div className="flex items-center justify-center gap-[24px] py-[89px] px-[60px] border border-[#800080] bg-[#FFFFFF] rounded-[16px]">
-        <img src={PortfolioOne} alt="Portfolio One" />
-        <img src={PortfolioTwo} alt="Portfolio Two" />
-        <img src={PortfolioThree} alt="Portfolio Three" />
+        <img
+          src={PortfolioOne}
+          className="hover:scale-105 transition-all duration-500"
+          alt="Portfolio One"
+        />
+        <img
+          src={PortfolioTwo}
+          className="hover:scale-105 transition-all duration-500"
+          alt="Portfolio Two"
+        />
+        <img
+          src={PortfolioThree}
+          className="hover:scale-105 transition-all duration-500"
+          alt="Portfolio Three"
+        />
       </div>
 
       <div className="flex items-center justify-center mt-[30px]">

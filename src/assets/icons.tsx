@@ -1,4 +1,4 @@
-export const StarIcon = () => (
+export const StarIcon = ({ color }: { color?: string }) => (
   <svg
     width="46"
     height="57"
@@ -8,7 +8,7 @@ export const StarIcon = () => (
   >
     <path
       d="M23 0L29.2121 20.8024L46 28.5L29.2121 36.1976L23 57L16.7879 36.1976L0 28.5L16.7879 20.8024L23 0Z"
-      fill="#800080"
+      fill={color ?? "#800080"}
     />
   </svg>
 );

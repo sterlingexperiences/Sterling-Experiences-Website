@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <div className="flex items-center justify-center bg-[#800080]">
-      <div className="flex items-center bg-red-500 justify-between py-[40px] w-full max-w-[1300px]">
+      <div className="flex items-center justify-between py-[40px] w-full max-w-[1300px]">
         <div className="flex flex-col items-center gap-[26px]">
           <img src={WhiteLogo} alt="" />
           <div className="flex gap-[16px] ml-[50px]">
