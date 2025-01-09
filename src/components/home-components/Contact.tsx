@@ -2,7 +2,7 @@ import { BlackStarIcon, YellowStarIcon } from "../../assets/icons";
 
 const Contact = () => {
   return (
-    <div className="flex items-center my-[67px]">
+    <div className="flex flex-col md:flex-row items-center my-[67px]">
       <div className="w-[50%] relative">
         <span className="absolute bottom-[120%] left-[20%] hover:left-[40%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <YellowStarIcon />

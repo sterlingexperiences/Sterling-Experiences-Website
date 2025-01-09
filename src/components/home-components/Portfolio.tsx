@@ -10,7 +10,7 @@ const Portfolio = () => {
         Portfolio
       </h1>
 
-      <div className="flex items-center justify-center gap-[24px] py-[89px] px-[60px] border border-[#800080] bg-[#FFFFFF] rounded-[16px]">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-[24px] py-[34px] md:py-[89px] px-[14px] md:px-[60px] border border-[#800080] bg-[#FFFFFF] rounded-[16px]">
         <img
           src={PortfolioOne}
           className="hover:scale-105 transition-all duration-500"
@@ -29,7 +29,7 @@ const Portfolio = () => {
       </div>
 
       <div className="flex items-center justify-center mt-[30px]">
-        <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[408px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]]">
+        <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[250px] md:w-[408px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]]">
           See more
           <ArrowRight />
         </button>
