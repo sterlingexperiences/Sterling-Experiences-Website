@@ -2,23 +2,25 @@ import { BlackStarIcon, YellowStarIcon } from "../../assets/icons";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center my-[67px]">
-      <div className="w-[50%] relative">
+    <div className="flex flex-col gap-[40px] md:flex-row items-center my-[67px]">
+      <div className="md:w-[50%] relative">
         <span className="absolute bottom-[120%] left-[20%] hover:left-[40%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <YellowStarIcon />
         </span>
-        <h1 className="font-ebGaramond font-[600] text-[56px] text-[#800080] leading-[78px] tracking-[-0.04em]">
+        <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[56px] text-[#800080] leading-[43px] md:leading-[78px] tracking-[-0.04em] text-center md:text-left">
           Send us a message today or book a free consultation
         </h1>
-        <button className="flex items-center justify-center gap-[8px] mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-          Schedule free consultation
-        </button>
+        <div className="flex items-center justify-center md:justify-start">
+          <button className="flex items-center justify-center gap-[8px] mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            Schedule free consultation
+          </button>
+        </div>
         <span className="absolute top-[150%] left-[30%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <BlackStarIcon />
         </span>
       </div>
 
-      <div className="w-[50%] bg-[#FFD700] rounded-[16px] px-[28px] py-[37px] space-y-[24px]">
+      <div className="w-full md:w-[50%] bg-[#FFD700] rounded-[16px] px-[28px] py-[37px] space-y-[24px]">
         <div className="flex flex-col space-y-[8px]">
           <label
             className="font-openSans font-[400] text-[16px] leading-[22px] tracking-[-0.02em]"
@@ -77,7 +79,7 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        <button className="flex items-center justify-center w-full py-[8px] border border-[#0E0E12] text-[#0E0E12] rounded-[16px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+        <button className="flex items-center justify-center w-full py-[8px] border border-[#800080] text-[#800080] rounded-[16px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
           Submit
         </button>
       </div>
