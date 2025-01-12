@@ -10,20 +10,20 @@ const Portfolio = () => {
         Portfolio
       </h1>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-[24px] py-[34px] md:py-[89px] px-[14px] md:px-[60px] border border-[#800080] bg-[#FFFFFF] rounded-[16px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] py-[34px] md:py-[89px] px-[14px] md:px-[60px] border border-[#800080] bg-[#FFFFFF] rounded-[16px]">
         <img
           src={PortfolioOne}
-          className="hover:scale-105 transition-all duration-500"
+          className="hover:scale-105 transition-all duration-500 w-full"
           alt="Portfolio One"
         />
         <img
           src={PortfolioTwo}
-          className="hover:scale-105 transition-all duration-500"
+          className="hover:scale-105 transition-all duration-500 w-full"
           alt="Portfolio Two"
         />
         <img
           src={PortfolioThree}
-          className="hover:scale-105 transition-all duration-500"
+          className="hover:scale-105 transition-all duration-500 w-full"
           alt="Portfolio Three"
         />
       </div>
