@@ -4,18 +4,18 @@ const Contact = () => {
   return (
     <div className="flex flex-col gap-[40px] md:flex-row items-center my-[67px]">
       <div className="md:w-[50%] relative">
-        <span className="absolute bottom-[120%] left-[20%] hover:left-[40%] hover:scale-150 transition-all duration-1000 ease-in-out">
+        <span className="absolute hidden md:block bottom-[120%] left-[20%] hover:left-[40%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <YellowStarIcon />
         </span>
         <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[56px] text-[#800080] leading-[43px] md:leading-[78px] tracking-[-0.04em] text-center md:text-left">
           Send us a message today or book a free consultation
         </h1>
         <div className="flex items-center justify-center md:justify-start">
-          <button className="flex items-center justify-center gap-[8px] mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+          <button className="flex items-center justify-center gap-[8px] mt-[16px] md:mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
             Schedule free consultation
           </button>
         </div>
-        <span className="absolute top-[150%] left-[30%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
+        <span className="absolute top-[-40%] md:top-[150%] left-[80%] md:left-[30%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <BlackStarIcon />
         </span>
       </div>
