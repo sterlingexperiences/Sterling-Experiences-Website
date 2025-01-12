@@ -11,9 +11,9 @@ import { ArrowRight } from "../../assets/icons";
 const PastEvents = () => {
   return (
     <div>
-      <div className="flex gap-[20px] justify-center mt-[50px]">
-        <div className="w-[40%]">
-          <h1 className="font-ebGaramond font-[600] text-[56px] text-[#800080] leading-[78px] tracking-[-0.04em]">
+      <div className="flex flex-col md:flex-row gap-[20px] justify-center mt-[50px]">
+        <div className="w-full md:w-[40%]">
+          <h1 className="font-ebGaramond font-[600] text-[56px] text-[#800080] leading-[78px] tracking-[-0.04em] text-center md:text-left">
             Our Past Events
           </h1>
           <div className="border border-[#800080] rounded-[16px] px-[47px] py-[84px]">
@@ -34,7 +34,7 @@ const PastEvents = () => {
           </div>
         </div>
 
-        <div className=" w-[60%] flex flex-col justify-center items-center border border-[#800080] rounded-[16px] px-[78px] py-[75px]">
+        <div className="w-full md:w-[60%] flex flex-col justify-center items-center border border-[#800080] rounded-[16px] px-[78px] py-[75px]">
           <div className="flex flex-col items-center space-y-[20px]">
             <img src={OYMWGImage} alt="" />
             <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
@@ -52,7 +52,7 @@ const PastEvents = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-[100px] gap-y-[30px] border border-[#800080] rounded-[16px] px-[80px] py-[60px] mt-[30px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] gap-y-[30px] border border-[#800080] rounded-[16px] px-[80px] py-[60px] mt-[30px]">
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={OoBirthday} alt="" />
           <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">

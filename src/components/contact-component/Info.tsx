@@ -9,7 +9,7 @@ import {
 
 const Info = () => {
   return (
-    <div className="flex items-center gap-[80px] border border-[#800080] rounded-[16px] bg-[#FFFFFF] px-[70px] py-[50px] mb-[60px]">
+    <div className="flex flex-col md:flex-row items-center gap-[80px] border border-[#800080] rounded-[16px] bg-[#FFFFFF] px-[24px] md:px-[70px] py-[50px] mb-[60px]">
       <div>
         <img src={ContactImage} alt="" />
       </div>
