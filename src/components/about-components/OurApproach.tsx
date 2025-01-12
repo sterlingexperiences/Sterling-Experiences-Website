@@ -3,7 +3,7 @@ import OurApproachImage from "../../assets/images/our-approach-image.png";
 
 const OurApproach = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex flex-col-reverse md:flew-row justify-between items-center">
       <div className="flex items-center justify-between">
         <div className="space-y-[24px] max-w-[660px]">
           <h1 className="font-ebGaramond text-[56px] text-[#800080] font-[600] leading-[78px] tracking-[-0.04em]">

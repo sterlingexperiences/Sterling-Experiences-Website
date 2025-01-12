@@ -8,12 +8,12 @@ const MeetTheFounder = () => {
         Meet Joy Steer Omoro
       </h1>
 
-      <div className="flex items-center justify-center gap-[32px] mt-[24px] border border-[#800080] bg-[#FFFFFF] rounded-[16px] px-[90px] py-[90px]">
-        <div className="w-[30%]">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-[32px] mt-[24px] md:border border-[#800080] bg-[#FFFFFF] rounded-[16px] px-[12px] md:px-[90px] py-[40px] md:py-[90px]">
+        <div className="w-full md:w-[30%]">
           <img src={Joy} className="w-full h-full" alt="" />
         </div>
 
-        <div className="w-[70%] space-y-[24px]">
+        <div className="w-full md:w-[70%] space-y-[24px]">
           <p className="font-openSans text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
             Joy Steer Omoro is a seasoned event professional with a passion for
             creating memorable experiences. With over six years of experience in
