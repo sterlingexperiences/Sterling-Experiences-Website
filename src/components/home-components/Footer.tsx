@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <div className="flex items-center justify-center bg-[#800080]">
-      <div className="flex items-center justify-between py-[40px] w-full max-w-[1300px]">
+      <div className="flex flex-col md:flex-row items-center justify-between py-[40px] w-full max-w-[1300px] px-4 ">
         <div className="flex flex-col items-center gap-[26px]">
           <img src={WhiteLogo} alt="" />
           <div className="flex gap-[16px] ml-[50px]">
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         <div className="space-y-[16px]">
-          <h1 className="font-ebGaramond font-[600] text-[48px] text-[#FFD700] leading-[57px] tracking-[-0.04em]">
+          <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#FFD700] leading-[43px] md:leading-[57px] tracking-[-0.04em] text-center md:text-left">
             Sign up for our Newsletter
           </h1>
           <div className="flex flex-col space-y-[8px]">
