@@ -11,17 +11,19 @@ import Layout from "../../layout/Layout";
 const Home = () => {
   return (
     <>
-      <Layout>
-        <div className="bg-[#F6F1E5]">
+      <div className="bg-[#F6F1E5]">
+        <Layout>
           <NavBar />
           <Hero />
-          <Testimonials />
+        </Layout>
+        {/* <Testimonials /> */}
+        <Layout>
           <FromFunfairs />
           <OurExpertise />
           <Portfolio />
           <Contact />
-        </div>
-      </Layout>
+        </Layout>
+      </div>
       <Footer />
     </>
   );
