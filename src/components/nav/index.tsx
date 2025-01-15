@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../assets/sterling-experiences-logo.png";
 import { NavLink } from "react-router"; // Correct import for NavLink
 import { CloseIcon, HamburgerIcon } from "../../assets/icons";
@@ -22,6 +22,24 @@ const StartPlanningButton = () => (
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Add shadow only when the navbar reaches the top
+      const scrollTop = window.scrollY;
+      if (scrollTop > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
@@ -34,50 +52,51 @@ const NavBar = () => {
   };
 
   return (
-    <div className="bg-[#F6F1E5] mt-[50px]">
-      {/* Desktop Navigation fixed top-0  */}
-      <nav className="sticky top-0 z-50 shadow-md flex justify-between items-center py-[8px] md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5]">
-        {/* Logo */}
-        <a href="/">
-          <img src={Logo} alt="Logo" className="w-[150px]" />
-        </a>
+    <nav
+      className={`sticky top-0 mt-[50px] z-50 flex justify-between items-center py-[8px] md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5] ${
+        isSticky ? "shadow-md" : ""
+      }`}
+    >
+      {/* Logo */}
+      <a href="/">
+        <img src={Logo} alt="Logo" className="w-[150px]" />
+      </a>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex space-x-[40px] text-[#0E0E12] font-[400] text-[16px] leading-[24px]">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.path}
-              to={link.path}
-              className={({ isActive }) =>
-                isActive ? "text-[#800080]" : "hover:text-[#800080]"
-              }
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </div>
-
-        {/* Start Planning Button */}
-        <div className="hidden md:flex">
-          <a
-            href="#"
-            className="font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
+      {/* Desktop Links */}
+      <div className="hidden md:flex space-x-[40px] text-[#0E0E12] font-[400] text-[16px] leading-[24px]">
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.path}
+            to={link.path}
+            className={({ isActive }) =>
+              isActive ? "text-[#800080]" : "hover:text-[#800080]"
+            }
           >
-            Start Planning
-          </a>
-        </div>
+            {link.name}
+          </NavLink>
+        ))}
+      </div>
 
-        {/* Hamburger Icon */}
-        <div
-          className="md:hidden cursor-pointer"
-          onClick={toggleMobileMenu}
-          tabIndex={0}
-          onKeyDown={(e) => e.key === "Enter" && toggleMobileMenu()}
-          aria-label="Toggle Mobile Menu"
+      {/* Start Planning Button */}
+      <div className="hidden md:flex">
+        <a
+          href="#"
+          className="font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
         >
-          <HamburgerIcon />
-        </div>
-      </nav>
+          Start Planning
+        </a>
+      </div>
+
+      {/* Hamburger Icon */}
+      <div
+        className="md:hidden cursor-pointer"
+        onClick={toggleMobileMenu}
+        tabIndex={0}
+        onKeyDown={(e) => e.key === "Enter" && toggleMobileMenu()}
+        aria-label="Toggle Mobile Menu"
+      >
+        <HamburgerIcon />
+      </div>
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
@@ -129,7 +148,7 @@ const NavBar = () => {
           </div>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 
