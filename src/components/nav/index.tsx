@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Logo from "../../assets/sterling-experiences-logo.png";
 import { NavLink } from "react-router"; // Correct import for NavLink
 import { CloseIcon, HamburgerIcon } from "../../assets/icons";
@@ -20,8 +20,8 @@ const NavBar = () => {
 
   return (
     <div className="bg-[#F6F1E5] mt-[50px]">
-      {/* Desktop Navigation */}
-      <nav className="fixed top-0 w-full flex justify-between items-center py-[8px] px-[48px] rounded-[16px] border border-[#800080] bg-[#F6F1E5]">
+      {/* Desktop Navigation fixed top-0  */}
+      <nav className="w-full flex justify-between items-center py-[8px] md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5]">
         {/* Logo */}
         <a href="/">
           <img src={Logo} alt="Logo" className="w-[150px]" />
@@ -69,8 +69,8 @@ const NavBar = () => {
         <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
           <div className="fixed top-0 left-0 w-[75%] max-w-[300px] h-full bg-[#F6F1E5] shadow-lg p-6 flex flex-col">
             {/* Close Button */}
-            <div className="flex justify-between items-center mb-6">
-              <img src={Logo} alt="Logo" className="w-[120px]" />
+            <div className="flex justify-between items-center mt-[50px] mb-6">
+              <img src={Logo} alt="Logo" className="w-[150px]" />
               <div
                 onClick={toggleMobileMenu}
                 className="cursor-pointer"
@@ -83,15 +83,15 @@ const NavBar = () => {
             </div>
 
             {/* Mobile Links */}
-            <ul className="space-y-6">
+            <ul className="space-y-3">
               {navLinks.map((link) => (
                 <li key={link.path}>
                   <NavLink
                     to={link.path}
                     className={({ isActive }) =>
                       isActive
-                        ? "flex items-center text-[#800080]"
-                        : "flex items-center text-[#0E0E12] hover:text-[#800080]"
+                        ? "flex items-center text-[#0E0E12] font-[400] text-[16px] leading-[22px] tracking-[0.02em] bg-[#800080B2] rounded-[16px] px-[10px] py-[8px] hover:text-white transition"
+                        : "flex items-center text-[#0E0E12] font-[400] text-[16px] leading-[22px] tracking-[0.02em] hover:text-[#800080] px-[10px] py-[8px] transition"
                     }
                     onClick={toggleMobileMenu}
                   >
@@ -104,7 +104,7 @@ const NavBar = () => {
             {/* Start Planning Button */}
             <a
               href="#"
-              className="block text-center mt-auto font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
+              className="block text-center mt-[50px] font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
             >
               Start Planning
             </a>
