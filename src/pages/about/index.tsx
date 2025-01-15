@@ -9,15 +9,15 @@ import Layout from "../../layout/Layout";
 const About = () => {
   return (
     <>
-      <Layout>
-        <div className="bg-[#F6F1E5]">
-          <NavBar />
+      <div className="bg-[#F6F1E5]">
+        <NavBar />
+        <Layout>
           <Header />
           <OurApproach />
           <MeetTheFounder />
           <Contact />
-        </div>
-      </Layout>
+        </Layout>
+      </div>
       <Footer />
     </>
   );
