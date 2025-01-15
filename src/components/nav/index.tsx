@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/sterling-experiences-logo.png";
 import { NavLink } from "react-router";
-// import { FaHome, FaInfoCircle, FaServicestack, FaImages, FaEnvelope, FaTimes } from "react-icons/fa";
-// import { GiHamburgerMenu } from "react-icons/gi";
+import { CloseIcon, HamburgerIcon } from "../../assets/icons";
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +14,7 @@ const NavBar = () => {
     <div className="bg-[#F6F1E5] mt-[50px]">
       {/* Desktop Navigation */}
       <nav
-        style={{ position: "sticky", top: 0 }}
+        style={{ position: "fixed", top: 0 }}
         className="w-full flex justify-between items-center py-[8px] px-[48px] rounded-[16px] border border-[#800080] bg-[#F6F1E5]"
       >
         {/* Logo */}
@@ -83,8 +82,9 @@ const NavBar = () => {
 
         {/* Hamburger Menu Icon */}
         <div className="md:hidden" onClick={toggleMobileMenu}>
-          {/* <GiHamburgerMenu className="text-[#800080] text-2xl cursor-pointer" /> */}
-          Menu
+          <div className="cursor-pointer">
+            <HamburgerIcon />
+          </div>
         </div>
       </nav>
 
@@ -95,11 +95,9 @@ const NavBar = () => {
             {/* Close Button */}
             <div className="flex justify-between items-center mb-6">
               <img src={Logo} alt="Logo" className="w-[120px]" />
-              {/* <FaTimes
-                className="text-[#800080] text-2xl cursor-pointer"
-                onClick={toggleMobileMenu}
-              /> */}
-              X
+              <div onClick={toggleMobileMenu} className="cursor-pointer">
+                <CloseIcon />
+              </div>
             </div>
 
             {/* Mobile Links */}
@@ -114,7 +112,6 @@ const NavBar = () => {
                   }
                   onClick={toggleMobileMenu}
                 >
-                  {/* <FaHome className="mr-4" />  */}
                   Home
                 </NavLink>
               </li>
@@ -128,7 +125,6 @@ const NavBar = () => {
                   }
                   onClick={toggleMobileMenu}
                 >
-                  {/* <FaInfoCircle className="mr-4" />  */}
                   About Us
                 </NavLink>
               </li>
@@ -142,7 +138,6 @@ const NavBar = () => {
                   }
                   onClick={toggleMobileMenu}
                 >
-                  {/* <FaServicestack className="mr-4" /> */}
                   Services
                 </NavLink>
               </li>
@@ -156,7 +151,6 @@ const NavBar = () => {
                   }
                   onClick={toggleMobileMenu}
                 >
-                  {/* <FaImages className="mr-4" />  */}
                   Portfolio
                 </NavLink>
               </li>
@@ -170,7 +164,6 @@ const NavBar = () => {
                   }
                   onClick={toggleMobileMenu}
                 >
-                  {/* <FaEnvelope className="mr-4" />  */}
                   Contact
                 </NavLink>
               </li>

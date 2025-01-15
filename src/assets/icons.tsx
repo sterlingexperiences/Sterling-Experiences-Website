@@ -136,3 +136,46 @@ export const MailIcon = ({ color }: { color?: string }) => (
     />
   </svg>
 );
+
+export const CloseIcon = () => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <mask
+      id="mask0_203_524"
+      style={{ maskType: "alpha" }}
+      maskUnits="userSpaceOnUse"
+      x="0"
+      y="0"
+      width="24"
+      height="24"
+    >
+      <rect width="24" height="24" fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask0_203_524)">
+      <path
+        d="M6.4 20.1685L5 18.5516L10.6 12.0842L5 5.61685L6.4 4L12 10.4674L17.6 4L19 5.61685L13.4 12.0842L19 18.5516L17.6 20.1685L12 13.7011L6.4 20.1685Z"
+        fill="#0E0E12"
+      />
+    </g>
+  </svg>
+);
+
+export const HamburgerIcon = () => (
+  <svg
+    width="30"
+    height="25"
+    viewBox="0 0 30 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4.93262 19.9787V17.4859H25.0674V19.9787H4.93262ZM4.93262 13.7466V11.2537H25.0674V13.7466H4.93262ZM4.93262 7.51436V5.02148H25.0674V7.51436H4.93262Z"
+      fill="#800080"
+    />
+  </svg>
+);
