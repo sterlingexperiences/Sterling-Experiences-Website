@@ -8,12 +8,12 @@ import Layout from "../../layout/Layout";
 const Services = () => {
   return (
     <>
-      <Layout>
-        <div className="bg-[#F6F1E5]">
-          <NavBar />
+      <div className="bg-[#F6F1E5]">
+        <NavBar />
+        <Layout>
           <Header />
-        </div>
-      </Layout>
+        </Layout>
+      </div>
       <WhatWeDo />
       <Layout>
         <div className="bg-[#F6F1E5]">

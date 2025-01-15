@@ -5,6 +5,7 @@ import About from "./pages/about";
 import Services from "./pages/services";
 import ContactUs from "./pages/contact";
 import Portfolio from "./pages/portfolio";
+import Web3MeetupPage from "./pages/blog/Web3Meetup";
 
 const AppRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
         <Route path="/about-us" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio/web-3-meetup" element={<Web3MeetupPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>

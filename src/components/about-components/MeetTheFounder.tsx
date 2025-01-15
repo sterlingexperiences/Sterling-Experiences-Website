@@ -14,7 +14,7 @@ const MeetTheFounder = () => {
         </div>
 
         <div className="w-full md:w-[70%] space-y-[24px]">
-          <p className="font-openSans text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
+          <p className="font-openSans text-balance text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
             Joy Steer Omoro is a seasoned event professional with a passion for
             creating memorable experiences. With over six years of experience in
             project management and event planning, Joy has successfully led
@@ -22,17 +22,19 @@ const MeetTheFounder = () => {
             expertise lies in crafting innovative and impactful events that
             leave a lasting impression.
           </p>
-          <p className="font-openSans text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
+          <p className="font-openSans text-balance text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
             As the founder of Sterling Experiences, Joy is dedicated to
             delivering exceptional event solutions tailored to the specific
             needs of each client. Her commitment to excellence, attention to
             detail, and collaborative approach have made her a trusted partner
             for businesses across various industries.
           </p>
-          <button className="flex items-center justify-center gap-[8px] text-[#F6F1E5] bg-[#800080] rounded-[16px] w-[400px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-            Explore Services
-            <ArrowRightWhite />
-          </button>
+          <div className="flex justify-center md:justify-start">
+            <button className="flex items-center justify-center gap-[8px] text-[#F6F1E5] bg-[#800080] px-[16px] rounded-[16px] md:w-[400px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              Explore Services
+              <ArrowRightWhite />
+            </button>
+          </div>
         </div>
       </div>
     </div>

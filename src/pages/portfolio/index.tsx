@@ -7,13 +7,13 @@ import Layout from "../../layout/Layout";
 const Portfolio = () => {
   return (
     <>
-      <Layout>
-        <div className="bg-[#F6F1E5]">
-          <NavBar />
+      <div className="bg-[#F6F1E5]">
+        <NavBar />
+        <Layout>
           <PastEvents />
           <Contact />
-        </div>
-      </Layout>
+        </Layout>
+      </div>
       <Footer />
     </>
   );

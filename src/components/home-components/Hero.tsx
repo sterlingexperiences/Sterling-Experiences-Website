@@ -1,7 +1,7 @@
 import HeroImage from "../../assets/images/hero-image.png";
 import Crown from "../../assets/images/crown.png";
 import Smallcrown from "../../assets/images/small-crown.png";
-import { SmallStarIcon, StarIcon } from "../../assets/icons";
+import { FunfairStarIcon, SmallStarIcon, StarIcon } from "../../assets/icons";
 
 const Hero = () => {
   return (
@@ -42,6 +42,9 @@ const Hero = () => {
           />
           <span className="absolute top-[40%] left-[100%] hover:left-[100%] hover:scale-150 transition-all duration-1000 ease-in-out">
             <SmallStarIcon color="#FFD700" />
+          </span>
+          <span className="absolute top-[90%] left-[120%] hover:left-[100%] hover:scale-150 transition-all duration-1000 ease-in-out">
+            <FunfairStarIcon />
           </span>
           <h1 className="font-[600] text-[36px] text-center text-[#800080] leading-[43px] tracking-[-0.04em] font-ebGaramond max-w-[250px]">
             Creating Sterling Experiences

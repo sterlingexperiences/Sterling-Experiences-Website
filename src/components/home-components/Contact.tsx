@@ -1,4 +1,8 @@
-import { BlackStarIcon, YellowStarIcon } from "../../assets/icons";
+import {
+  BlackStarIcon,
+  BlackStarSmallIcon,
+  YellowStarIcon,
+} from "../../assets/icons";
 
 const Contact = () => {
   return (
@@ -15,8 +19,11 @@ const Contact = () => {
             Schedule free consultation
           </button>
         </div>
-        <span className="absolute top-[-40%] md:top-[150%] left-[80%] md:left-[30%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
+        <span className="hidden md:block absolute top-[-40%] md:top-[150%] left-[80%] md:left-[30%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <BlackStarIcon />
+        </span>
+        <span className="md:hidden absolute top-[-20%] left-[90%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
+          <BlackStarSmallIcon />
         </span>
       </div>
 

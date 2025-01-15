@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div>
+    <div className="mt-[50px]">
       <div className="flex flex-col md:flex-row justify-center items-end gap-[32px] bg-[#FFD700] rounded-[16px] h-[411px] pb-[18px] about_bg">
         <h1 className="rounded-r-[16px] rounded-b-[16px] bg-[#800080] px-[24px] py-[20px] font-ebGaramond font-[600] text-[36px] md:text-[56px] text-[#FFD700] leading-[43px] md:leading-[78px] tracking-[-0.04em] hover:bg-[#FFD700] hover:text-[#800080] transition-all duration-300">
           We Create
