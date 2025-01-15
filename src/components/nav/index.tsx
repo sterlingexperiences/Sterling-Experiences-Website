@@ -90,8 +90,16 @@ const NavBar = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
-          <div className="fixed top-0 left-0 w-[75%] max-w-[300px] h-full bg-[#F6F1E5] shadow-lg p-6 flex flex-col">
+        <div
+          className={`fixed inset-0 z-50 bg-black bg-opacity-50 transition-opacity duration-300 ${
+            isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
+        >
+          <div
+            className={`fixed top-0 left-0 w-[75%] max-w-[300px] h-full bg-[#F6F1E5] shadow-lg p-6 flex flex-col transition-transform duration-300 ${
+              isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+          >
             {/* Close Button */}
             <div className="flex justify-between items-center mb-6">
               <img src={Logo} alt="Logo" className="w-[120px]" />
