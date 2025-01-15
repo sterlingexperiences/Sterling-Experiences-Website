@@ -53,7 +53,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`sticky top-0 mt-[50px] z-50 flex justify-between items-center py-[8px] md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5] ${
+      className={`sticky top-0 md:mt-[50px] z-50 flex justify-between items-center mx-auto py-[16px] md:py-[8px] px-4 md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5] max-w-[1300px] ${
         isSticky ? "shadow-md" : ""
       }`}
     >
