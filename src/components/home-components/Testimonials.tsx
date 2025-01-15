@@ -25,11 +25,11 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="md:hidden mx-[16px] my-[40px] shadow-[0_0_4px_0_#0000004D] px-[45px] pt-[18px] pb-[60px]">
+      <div className="md:hidden mx-[16px] rounded-[16px] shadow-[0_0_4px_0_#0000004D] px-[45px] pt-[18px] pb-[40px]">
         <h1 className="text-[#0E0E12] text-[20px] font-[600] leading-[28px] tracking-[-0.02em]">
           What our clients says
         </h1>
-        <div className="font-openSans">
+        <div className="font-openSans mt-[18px]">
           <p className="font-[400] text-[12px] leading-[16px] tracking-[-0.02em]">
             Joy is quite innovative in the execution of the project, and she
             does it effortlessly. If you desire that exceptional and excellent
