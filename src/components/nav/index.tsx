@@ -69,10 +69,16 @@ const NavBar = () => {
             key={link.path}
             to={link.path}
             className={({ isActive }) =>
-              isActive ? "text-[#800080]" : "hover:text-[#800080]"
+              `relative group ${
+                isActive ? "text-[#800080]" : "hover:text-[#800080]"
+              }`
             }
           >
             {link.name}
+            {/* Bottom Bar */}
+            <span
+              className={`absolute bottom-0 left-0 w-0 h-[2px] bg-[#800080] transition-all duration-300 group-hover:w-full`}
+            />
           </NavLink>
         ))}
       </div>
