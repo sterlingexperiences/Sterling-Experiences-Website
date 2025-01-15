@@ -53,7 +53,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className={`sticky top-0 md:mt-[50px] z-50 flex justify-between items-center mx-auto py-[16px] md:py-[8px] px-4 md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5] max-w-[1300px] ${
+      className={`sticky top-0 md:mt-[50px] z-50 flex justify-between items-center mx-auto py-[16px] px-4 md:px-[48px] rounded-[16px] border-[#800080] bg-[#F6F1E5] max-w-[1300px] ${
         isSticky ? "shadow-md" : ""
       }`}
     >
@@ -81,7 +81,7 @@ const NavBar = () => {
       <div className="hidden md:flex">
         <a
           href="#"
-          className="font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
+          className="font-[600] text-[16px] leading-[22px] tracking-[-0.02em] rounded-[10px] px-[16px] py-[8px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
         >
           Start Planning
         </a>
