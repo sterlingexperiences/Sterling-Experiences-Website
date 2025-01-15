@@ -1,6 +1,7 @@
 import HeroImage from "../../assets/images/hero-image.png";
 import Crown from "../../assets/images/crown.png";
-import { StarIcon } from "../../assets/icons";
+import Smallcrown from "../../assets/images/small-crown.png";
+import { SmallStarIcon, StarIcon } from "../../assets/icons";
 
 const Hero = () => {
   return (
@@ -35,12 +36,12 @@ const Hero = () => {
       <div className="flex flex-col justify-between items-center py-[70px] md:hidden">
         <div className="font-openSans relative flex flex-col items-center">
           <img
-            src={Crown}
-            className="absolute bottom-[50%] right-[80%] hover:rotate-[15deg] transition-all duration-1000 ease-in-out"
+            src={Smallcrown}
+            className="absolute bottom-[70%] right-[85%] hover:rotate-[15deg] transition-all duration-1000 ease-in-out"
             alt=""
           />
-          <span className="absolute bottom-[120%] left-[80%] hover:left-[100%] hover:scale-150 transition-all duration-1000 ease-in-out">
-            <StarIcon color="#FFD700" />
+          <span className="absolute top-[40%] left-[100%] hover:left-[100%] hover:scale-150 transition-all duration-1000 ease-in-out">
+            <SmallStarIcon color="#FFD700" />
           </span>
           <h1 className="font-[600] text-[36px] text-center text-[#800080] leading-[43px] tracking-[-0.04em] font-ebGaramond max-w-[250px]">
             Creating Sterling Experiences

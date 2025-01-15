@@ -1,3 +1,4 @@
+import { FunfairStarIcon, SmallStarIcon } from "../../assets/icons";
 import FunfairImage from "../../assets/images/funfair-image.png";
 
 const FromFunfairs = () => {
@@ -6,8 +7,11 @@ const FromFunfairs = () => {
       <img src={FunfairImage} alt="Funfair Image" />
 
       <div className="font-openSans px-[30px]">
-        <h1 className="font-ebGaramond font-[600] text-[48px] text-[#800080] leading-[57px] tracking-[-0.04em] text-center md:text-left">
+        <h1 className="relative font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#800080] leading-[43px] md:leading-[57px] tracking-[-0.04em] text-center md:text-left">
           From Funfairs to Sterling Experiences
+          <span className="absolute md:hidden">
+            <FunfairStarIcon />
+          </span>
         </h1>
         <p className="mt-[8px] text-balance text-center md:text-left">
           Sterling Experiences is an event management company based in Nigeria,

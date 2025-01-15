@@ -13,6 +13,36 @@ export const StarIcon = ({ color }: { color?: string }) => (
   </svg>
 );
 
+export const SmallStarIcon = ({ color }: { color?: string }) => (
+  <svg
+    width="31"
+    height="38"
+    viewBox="0 0 31 38"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.5 0L19.6864 13.8683L31 19L19.6864 24.1317L15.5 38L11.3136 24.1317L0 19L11.3136 13.8683L15.5 0Z"
+      fill={color ?? "#800080"}
+    />
+  </svg>
+);
+
+export const FunfairStarIcon = () => (
+  <svg
+    width="23"
+    height="28"
+    viewBox="0 0 23 28"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M11.5 0L14.606 10.2187L23 14L14.606 17.7813L11.5 28L8.39396 17.7813L0 14L8.39396 10.2187L11.5 0Z"
+      fill="#800080"
+    />
+  </svg>
+);
+
 export const YellowStarIcon = () => (
   <svg
     width="46"
