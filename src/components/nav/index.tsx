@@ -11,6 +11,15 @@ const navLinks = [
   { name: "CONTACT", path: "/contact-us" },
 ];
 
+const StartPlanningButton = () => (
+  <a
+    href="#"
+    className="font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
+  >
+    Start Planning
+  </a>
+);
+
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,10 +27,16 @@ const NavBar = () => {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Escape") {
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <div className="bg-[#F6F1E5] mt-[50px]">
       {/* Desktop Navigation fixed top-0  */}
-      <nav className="w-full flex justify-between items-center py-[8px] md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5]">
+      <nav className="sticky top-0 z-50 shadow-md flex justify-between items-center py-[8px] md:px-[48px] rounded-[16px] md:border border-[#800080] bg-[#F6F1E5]">
         {/* Logo */}
         <a href="/">
           <img src={Logo} alt="Logo" className="w-[150px]" />
@@ -66,7 +81,10 @@ const NavBar = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50">
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-50"
+          onKeyDown={handleKeyDown}
+        >
           <div className="fixed top-0 left-0 w-[75%] max-w-[300px] h-full bg-[#F6F1E5] shadow-lg p-6 flex flex-col">
             {/* Close Button */}
             <div className="flex justify-between items-center mt-[50px] mb-6">
