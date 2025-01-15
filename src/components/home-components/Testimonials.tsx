@@ -32,14 +32,14 @@ const Testimonials = () => {
 
   return (
     <div className="flex flex-col items-center justify-center mx-auto md:border-y border-[#0000004D]">
-      <div className="hidden md:flex flex-col gap-6 items-center justify-center overflow-hidden w-full max-w-[800px] px-4 md:px-8 py-12">
-        <div className="flex items-center gap-4">
-          <h1 className="font-ebGaramond text-[24px] md:text-[36px] font-medium leading-tight tracking-[-0.04em]">
+      <div className="hidden md:flex gap-[120px] items-center justify-center overflow-hidden w-full max-w-[1300px] px-4 md:px-8 py-12">
+        <div className="flex items-center gap-[200px]">
+          <h1 className="font-ebGaramond text-[24px] md:text-[36px] font-medium leading-tight tracking-[-0.04em] whitespace-nowrap">
             What our clients say
           </h1>
           <StarIcon />
         </div>
-        <div className="relative w-full h-[150px] md:h-[200px] overflow-hidden">
+        <div className="relative w-[100%] h-[150px] md:h-[200px] overflow-hidden">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -51,10 +51,10 @@ const Testimonials = () => {
                   : "translate-x-full opacity-0"
               }`}
             >
-              <p className="text-center font-openSans text-[14px] md:text-[18px] leading-[24px] tracking-[-0.02em]">
+              <p className="font-openSans text-[14px] md:text-[18px] leading-[24px] tracking-[-0.02em]">
                 {testimonial.message}
               </p>
-              <h2 className="text-center mt-4 font-semibold text-[14px] md:text-[18px] leading-tight">
+              <h2 className="mt-4 font-semibold text-[14px] md:text-[18px] leading-tight">
                 {testimonial.author}
               </h2>
             </div>
