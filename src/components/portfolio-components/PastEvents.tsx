@@ -33,10 +33,12 @@ const PastEvents = () => {
             </div>
             <div className="mt-[30px] flex flex-col items-center space-y-[20px]">
               <img src={InfotechImage} alt="" />
-              <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[200px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-                INFOTECH SUMMIT
-                <ArrowRight />
-              </button>
+              <Link to="infotech-summit">
+                <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[200px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+                  INFOTECH SUMMIT
+                  <ArrowRight />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
