@@ -11,14 +11,14 @@ const navLinks = [
   { name: "CONTACT", path: "/contact-us" },
 ];
 
-const StartPlanningButton = () => (
-  <a
-    href="#"
-    className="font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
-  >
-    Start Planning
-  </a>
-);
+// const StartPlanningButton = () => (
+//   <a
+//     href="#"
+//     className="font-[500] text-[16px] rounded-[10px] px-[20px] py-[12px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
+//   >
+//     Start Planning
+//   </a>
+// );
 
 const NavBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
