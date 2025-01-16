@@ -55,10 +55,12 @@ const PastEvents = () => {
           </div>
           <div className="mt-[30px] flex flex-col items-center space-y-[20px]">
             <img src={Pitch2Win} alt="" />
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-              PITCH2WIN4
-              <ArrowRight />
-            </button>
+            <Link to="pitch-2-win-4">
+              <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+                PITCH2WIN4
+                <ArrowRight />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

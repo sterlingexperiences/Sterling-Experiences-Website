@@ -8,6 +8,7 @@ import Portfolio from "./pages/portfolio";
 import Web3MeetupPage from "./pages/blog/Web3Meetup";
 import InfotechSummitPage from "./pages/blog/InfotechSummit";
 import Omwg7Page from "./pages/blog/Omwg7";
+import Pitch2Win4Page from "./pages/blog/Pitch2Win4";
 
 const AppRoutes = () => {
   return (
@@ -23,6 +24,7 @@ const AppRoutes = () => {
           element={<InfotechSummitPage />}
         />
         <Route path="/portfolio/oya-make-we-groove-7" element={<Omwg7Page />} />
+        <Route path="/portfolio/pitch-2-win-4" element={<Pitch2Win4Page />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
