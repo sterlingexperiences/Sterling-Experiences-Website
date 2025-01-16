@@ -1,4 +1,4 @@
-import { FunfairStarIcon, SmallStarIcon } from "../../assets/icons";
+import { FunfairStarIcon } from "../../assets/icons";
 import FunfairImage from "../../assets/images/funfair-image.png";
 
 const FromFunfairs = () => {
