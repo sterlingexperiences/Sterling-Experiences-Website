@@ -87,10 +87,12 @@ const PastEvents = () => {
         </div>
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={OyaMakeWeGroove6} alt="" />
-          <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-            OYAMAKEWEGROVE6
-            <ArrowRight />
-          </button>
+          <Link to="oya-make-we-groove-6">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              OYAMAKEWEGROVE6
+              <ArrowRight />
+            </button>
+          </Link>
         </div>
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={Pitch2Win3} alt="" />

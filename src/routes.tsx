@@ -11,6 +11,7 @@ import Omwg7Page from "./pages/blog/Omwg7";
 import Pitch2Win4Page from "./pages/blog/Pitch2Win4";
 import OoBirthdayPage from "./pages/blog/OoBirthday";
 import KcBoysPage from "./pages/blog/KcBoys";
+import Omwg6Page from "./pages/blog/Omwg6";
 
 const AppRoutes = () => {
   return (
@@ -29,6 +30,7 @@ const AppRoutes = () => {
         <Route path="/portfolio/pitch-2-win-4" element={<Pitch2Win4Page />} />
         <Route path="/portfolio/oo-birthday" element={<OoBirthdayPage />} />
         <Route path="/portfolio/kc-tech" element={<KcBoysPage />} />
+        <Route path="/portfolio/oya-make-we-groove-6" element={<Omwg6Page />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
