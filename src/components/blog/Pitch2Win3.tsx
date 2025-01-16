@@ -11,7 +11,7 @@ import P2w38 from "../../assets/images/p2w3-8.png";
 
 const ImageList = [P2w31, P2w32, P2w33, P2w34, P2w35, P2w36, P2w37, P2w38];
 
-const Web3Meetup = () => {
+const Pitch2Win3 = () => {
   const navigate = useNavigate();
   return (
     <>
@@ -42,4 +42,4 @@ const Web3Meetup = () => {
   );
 };
 
-export default Web3Meetup;
+export default Pitch2Win3;
