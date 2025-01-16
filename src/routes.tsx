@@ -7,6 +7,7 @@ import ContactUs from "./pages/contact";
 import Portfolio from "./pages/portfolio";
 import Web3MeetupPage from "./pages/blog/Web3Meetup";
 import InfotechSummitPage from "./pages/blog/InfotechSummit";
+import Omwg7Page from "./pages/blog/Omwg7";
 
 const AppRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const AppRoutes = () => {
           path="/portfolio/infotech-summit"
           element={<InfotechSummitPage />}
         />
+        <Route path="/portfolio/oya-make-we-groove-7" element={<Omwg7Page />} />
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>
