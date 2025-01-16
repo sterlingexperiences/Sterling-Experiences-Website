@@ -78,7 +78,6 @@ const PastEvents = () => {
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={KcBoys} alt="" />
           <Link to="kc-tech">
-            {" "}
             <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[250px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
               KC BOYS TECH EVENT
               <ArrowRight />
@@ -96,10 +95,12 @@ const PastEvents = () => {
         </div>
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={Pitch2Win3} alt="" />
-          <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-            PITCH2WIN3
-            <ArrowRight />
-          </button>
+          <Link to="pitch-2-win-3">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              PITCH2WIN3
+              <ArrowRight />
+            </button>
+          </Link>
         </div>
       </div>
     </div>
