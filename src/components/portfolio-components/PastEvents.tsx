@@ -68,10 +68,12 @@ const PastEvents = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] gap-y-[30px] border border-[#800080] rounded-[16px] px-[24px] md:px-[80px] py-[46px] md:py-[60px] mt-[30px]">
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={OoBirthday} alt="" />
-          <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-            Oo'S 40TH BIRTHDAY
-            <ArrowRight />
-          </button>
+          <Link to="oo-birthday">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              Oo'S 40TH BIRTHDAY
+              <ArrowRight />
+            </button>
+          </Link>
         </div>
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={KcBoys} alt="" />
