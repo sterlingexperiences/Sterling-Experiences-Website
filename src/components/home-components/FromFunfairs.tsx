@@ -4,17 +4,17 @@ import FunfairImage from "../../assets/images/funfair-image.png";
 
 const FromFunfairs = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-[100px] justify-between items-center py-[60px]">
+    <div className="flex flex-col md:flex-row gap-[20px] md:gap-[100px] justify-between items-center py-[60px]">
       <img src={FunfairImage} alt="Funfair Image" />
 
-      <div className="font-openSans px-[30px]">
+      <div className="font-openSans md:px-[30px]">
         <h1 className="relative font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#800080] leading-[43px] md:leading-[57px] tracking-[-0.04em] text-center md:text-left">
           From Funfairs to Sterling Experiences
           <span className="absolute md:hidden">
             <FunfairStarIcon />
           </span>
         </h1>
-        <p className="mt-[8px] text-balance text-center md:text-left">
+        <p className="mt-[12px] font-openSans text-[14px] md:text-[18px] text-[#0E0E12] leading-[22px] md:leading-[25px] tracking-[-0.02em]">
           Sterling Experiences is an event management company based in Nigeria,
           that specializes in creating exceptional and memorable experiences for
           businesses. A company founded out of the captivation of the magic of

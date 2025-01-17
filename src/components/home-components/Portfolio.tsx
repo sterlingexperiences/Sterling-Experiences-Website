@@ -6,7 +6,7 @@ import PortfolioThree from "../../assets/images/portfolio-three.png";
 const Portfolio = () => {
   return (
     <div className="mt-[64px]">
-      <h1 className="font-ebGaramond font-[600] text-[56px] text-[#800080] leading-[78px] tracking-[-0.04em] mb-[30px] text-center">
+      <h1 className="font-ebGaramond font-[600] text-[36px] md:text-[56px] text-[#800080] leading-[43px] md:leading-[78px] tracking-[-0.04em] mb-[30px] text-center">
         Portfolio
       </h1>
 
