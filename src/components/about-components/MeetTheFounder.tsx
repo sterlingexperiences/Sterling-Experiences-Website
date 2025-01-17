@@ -4,7 +4,7 @@ import Joy from "../../assets/images/joy.png";
 const MeetTheFounder = () => {
   return (
     <div>
-      <h1 className="font-ebGaramond text-[56px] text-[#800080] font-[600] leading-[78px] tracking-[-0.04em] text-center mt-[64px]">
+      <h1 className="font-ebGaramond text-[36px] md:text-[56px] text-[#800080] font-[600] leading-[43px] md:leading-[78px] tracking-[-0.04em] text-center mt-[64px]">
         Meet Joy Steer Omoro
       </h1>
 
@@ -14,7 +14,7 @@ const MeetTheFounder = () => {
         </div>
 
         <div className="w-full md:w-[70%] space-y-[24px]">
-          <p className="font-openSans text-balance text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
+          <p className="font-openSans text-[14px] md:text-[18px] text-[#0E0E12] leading-[22px] md:leading-[25px] tracking-[-0.02em]">
             Joy Steer Omoro is a seasoned event professional with a passion for
             creating memorable experiences. With over six years of experience in
             project management and event planning, Joy has successfully led
@@ -22,7 +22,7 @@ const MeetTheFounder = () => {
             expertise lies in crafting innovative and impactful events that
             leave a lasting impression.
           </p>
-          <p className="font-openSans text-balance text-[18px] text-[#0E0E12] leading-[25px] tracking-[-0.02em]">
+          <p className="font-openSans text-[14px] md:text-[18px] text-[#0E0E12] leading-[22px] md:leading-[25px] tracking-[-0.02em]">
             As the founder of Sterling Experiences, Joy is dedicated to
             delivering exceptional event solutions tailored to the specific
             needs of each client. Her commitment to excellence, attention to
