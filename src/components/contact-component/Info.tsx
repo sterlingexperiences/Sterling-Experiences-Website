@@ -17,18 +17,18 @@ const Info = () => {
       <div className="space-y-[30px]">
         <div className="flex items-center gap-[16px]">
           <TelephoneIcon color="#800080" />
-          <p className="font-openSans font-[400] text-[18px] leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
+          <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
             +234 708 930 0072
           </p>
         </div>
         <div className="flex items-center gap-[16px]">
           <MailIcon color="#800080" />
-          <p className="font-openSans font-[400] text-[18px] leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
+          <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
             sterlingxperience@gmail.com
           </p>
         </div>
         <div className="flex items-center gap-[16px]">
-          <p className="font-openSans font-[400] text-[18px] leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
+          <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
             Follow us on
           </p>
           <InstagramIcon color="#800080" />
