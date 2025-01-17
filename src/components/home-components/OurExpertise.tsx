@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { ArrowRight } from "../../assets/icons";
 
 const OurExpertise = () => {
@@ -22,10 +23,12 @@ const OurExpertise = () => {
         </div>
 
         <div className="flex flex-col items-center space-y-[20px]">
-          <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-            Explore Services
-            <ArrowRight />
-          </button>
+          <Link to="services">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              Explore Services
+              <ArrowRight />
+            </button>
+          </Link>
           <h1 className="flex items-center justify-center bg-[#FFD700] rounded-[16px] w-[368px] h-[132px] font-openSans font-[600] text-[28px] text-[#800080] leading-[39px] tracking-[-0.02em]">
             Conferences & Seminars
           </h1>
