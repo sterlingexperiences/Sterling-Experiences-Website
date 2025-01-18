@@ -33,7 +33,7 @@ const MeetTheFounder = () => {
           <div className="flex justify-center md:justify-start">
             <Link
               to="/services"
-              className="flex items-center justify-center gap-[8px] text-[#F6F1E5] bg-[#800080] px-[16px] rounded-[16px] md:w-[400px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]"
+              className="flex items-center justify-center gap-[8px] text-[#F6F1E5] bg-[#800080] px-[16px] rounded-[16px] md:w-[400px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out"
             >
               Explore Services
               <ArrowRightWhite />

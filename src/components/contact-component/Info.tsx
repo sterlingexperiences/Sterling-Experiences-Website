@@ -15,22 +15,29 @@ const Info = () => {
       </div>
 
       <div className="space-y-[30px]">
-        <a href="tel:+2347089300072">
-          <div className="flex items-center gap-[16px]">
-            <TelephoneIcon color="#800080" />
-            <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
-              +234 708 930 0072
-            </p>
-          </div>
-        </a>
-        <a href="mailto:info@sterlingxperiences.com">
-          <div className="flex items-center gap-[16px]">
-            <MailIcon color="#800080" />
-            <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
-              sterlingxperience@gmail.com
-            </p>
-          </div>
-        </a>
+        <div>
+          <a href="tel:+2347089300072" className="hover:underline">
+            <div className="flex items-center gap-[16px]">
+              <TelephoneIcon color="#800080" />
+              <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
+                +234 708 930 0072
+              </p>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a
+            href="mailto:info@sterlingxperiences.com"
+            className="hover:underline"
+          >
+            <div className="flex items-center gap-[16px]">
+              <MailIcon color="#800080" />
+              <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
+                sterlingxperience@gmail.com
+              </p>
+            </div>
+          </a>
+        </div>
         <div className="flex items-center gap-[16px]">
           <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
             Follow us on

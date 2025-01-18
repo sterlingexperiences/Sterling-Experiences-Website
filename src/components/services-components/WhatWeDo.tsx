@@ -13,7 +13,7 @@ const WhatWeDo = () => {
             <li>Venue Selection Management</li>
             <li>Event Evaluation and Reporting</li>
           </ul>
-          <button className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px]">
+          <button className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
             Start planning
           </button>
         </div>
@@ -27,7 +27,7 @@ const WhatWeDo = () => {
             <li>Corporate Gifting</li>
             <li>Destination Management</li>
           </ul>
-          <button className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px]">
+          <button className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
             Start planning
           </button>
         </div>

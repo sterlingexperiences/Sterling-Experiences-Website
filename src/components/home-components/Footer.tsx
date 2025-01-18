@@ -55,7 +55,7 @@ const Footer = () => {
                 name="email"
                 id="email"
               />
-              <button className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px]">
+              <button className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
                 Submit
               </button>
             </div>
