@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { ArrowRightWhite } from "../../assets/icons";
 import Joy from "../../assets/images/joy.png";
 
@@ -30,10 +31,13 @@ const MeetTheFounder = () => {
             for businesses across various industries.
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="flex items-center justify-center gap-[8px] text-[#F6F1E5] bg-[#800080] px-[16px] rounded-[16px] md:w-[400px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            <Link
+              to="/services"
+              className="flex items-center justify-center gap-[8px] text-[#F6F1E5] bg-[#800080] px-[16px] rounded-[16px] md:w-[400px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]"
+            >
               Explore Services
               <ArrowRightWhite />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

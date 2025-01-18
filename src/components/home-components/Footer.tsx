@@ -13,10 +13,26 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-[26px]">
           <img src={WhiteLogo} className="hidden md:block" alt="" />
           <div className="flex gap-[16px] md:ml-[50px]">
-            <InstagramIcon />
-            <LinkedinIcon />
-            <TelephoneIcon />
-            <MailIcon />
+            <a
+              href="https://www.instagram.com/sterling_experiences"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/sterling-xperiences/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedinIcon />
+            </a>
+            <a href="tel:+2347089300072">
+              <TelephoneIcon />
+            </a>
+            <a href="mailto:info@sterlingxperiences.com">
+              <MailIcon />
+            </a>
           </div>
         </div>
 
