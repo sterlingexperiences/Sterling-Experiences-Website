@@ -13,14 +13,12 @@ const Services = () => {
         <Layout>
           <Header />
         </Layout>
-      </div>
-      <WhatWeDo />
-      <Layout>
-        <div className="bg-[#F6F1E5]">
+        <WhatWeDo />
+        <Layout>
           <Contact />
-        </div>
-      </Layout>
-      <Footer />
+        </Layout>
+        <Footer />
+      </div>
     </>
   );
 };

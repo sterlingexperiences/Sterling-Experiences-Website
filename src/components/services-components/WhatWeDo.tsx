@@ -1,8 +1,8 @@
 const WhatWeDo = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center gap-[64px] bg-[#FFFFFF] px-[14px] py-[80px] whatWeDo_bg">
-      <div className="flex flex-col border border-[#800080] rounded-[16px] px-[62px] py-[78px] max-w-[524px] bg-white">
-        <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#0E0E12] leading-[43px] md:leading-[57px] tracking-[-0.04em] px-[25px]">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-[16px] md:gap-[64px] bg-[#FFFFFF] px-[14px] py-[40px] md:py-[80px] whatWeDo_bg">
+      <div className="flex flex-col border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] mx-auto w-full md:max-w-[524px] bg-white">
+        <h1 className="font-ebGaramond text-balance font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#0E0E12] leading-[43px] md:leading-[57px] tracking-[-0.04em] px-[25px]">
           Event Management and Production
         </h1>
         <div className="h-[2px] bg-[#0E0E12] my-[24px]" />
@@ -17,7 +17,7 @@ const WhatWeDo = () => {
         </button>
       </div>
 
-      <div className="flex flex-col border border-[#800080] rounded-[16px] px-[62px] py-[78px] max-w-[524px] bg-white">
+      <div className="flex flex-col border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] w-full md:max-w-[524px] bg-white">
         <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#0E0E12] leading-[43px] md:leading-[57px] tracking-[-0.04em] px-[25px]">
           Add-ons
         </h1>
