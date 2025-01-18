@@ -24,7 +24,7 @@ const OurExpertise = () => {
 
         <div className="flex flex-col items-center space-y-[20px]">
           <Link to="services">
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
               Explore Services
               <ArrowRight />
             </button>
