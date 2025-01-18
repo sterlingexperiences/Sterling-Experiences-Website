@@ -16,12 +16,12 @@ const Header = () => {
         a customized plan that aligns with your budget and goals
       </p>
 
-      <div className="flex items-center justify-center gap-[32px] mt-[60px] mb-[40px]">
-        <div className="w-full md:w-[252px] h-[2px] bg-[#FFD700]" />
+      <div className="flex items-center justify-center gap-[8px] md:gap-[32px] mt-[20px] md:mt-[60px] mb-[40px]">
+        <div className="w-full max-w-[252px] h-[2px] bg-[#FFD700]" />
         <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[56px] text-[#800080] leading-[43px] md:leading-[78px] tracking-[-0.04em] whitespace-nowrap">
           What do we do?
         </h1>
-        <div className="w-full md:w-[252px] h-[2px] bg-[#FFD700]" />
+        <div className="w-full max-w-[252px] h-[2px] bg-[#FFD700]" />
       </div>
     </div>
   );

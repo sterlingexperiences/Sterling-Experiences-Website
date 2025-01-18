@@ -1,8 +1,8 @@
 const WhatWeDo = () => {
   return (
     <div className="whatWeDo_bg">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[64px] bg-[#FFFFFF] px-[14px] md:px-0 py-[40px] md:py-[80px] max-w-[1300px] mx-auto">
-        <div className="flex flex-col mx-auto border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] w-full md:max-w-[524px] bg-red-200">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[64px] px-[14px] md:px-0 py-[40px] md:py-[80px] max-w-[1300px] mx-auto">
+        <div className="flex flex-col ml-auto border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] w-full md:max-w-[524px] bg-white">
           <h1 className="font-ebGaramond text-balance font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#0E0E12] leading-[43px] md:leading-[57px] tracking-[-0.04em] px-[25px]">
             Event Management and Production
           </h1>
@@ -18,7 +18,7 @@ const WhatWeDo = () => {
           </button>
         </div>
 
-        <div className="flex flex-col h-fit my-auto border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] w-full md:max-w-[524px] bg-red-500">
+        <div className="flex flex-col h-fit my-auto border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] w-full md:max-w-[524px] bg-white">
           <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#0E0E12] leading-[43px] md:leading-[57px] tracking-[-0.04em] px-[25px]">
             Add-ons
           </h1>
