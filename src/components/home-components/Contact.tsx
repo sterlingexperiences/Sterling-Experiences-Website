@@ -15,7 +15,7 @@ const Contact = () => {
           Send us a message today or book a free consultation
         </h1>
         <div className="flex items-center justify-center md:justify-start">
-          <button className="flex items-center justify-center gap-[8px] mt-[16px] md:mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+          <button className="flex items-center justify-center gap-[8px] mt-[16px] md:mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-white transition">
             Schedule free consultation
           </button>
         </div>

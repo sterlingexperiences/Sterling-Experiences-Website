@@ -9,13 +9,18 @@ const testimonials = [
   },
   {
     message:
-      "Working with Sterling Experiences has been phenomenal. Their attention to detail and creativity brought our vision to life in ways we never imagined.",
-    author: "Sophia Johnson, Creative Director",
+      "I was referred to Joy during the early planning stages of the Infotech Summit, and I couldn't be more grateful. I wholeheartedly recommend Joy and her Sterling Experiences team for your event planning and coverage needs. Their commitment to excellence will ensure your experience is nothing short of sterling.",
+    author: "Chidubem Agulue, Convener, Infotech Summit",
   },
   {
     message:
-      "Sterling Experiences delivered beyond our expectations. They truly understand how to create memorable events.",
-    author: "Michael Adeyemi, CEO at Eventify",
+      "I had the privilege of working with Joy during the Pitch2Win 3 & 4 startup competitions in 2023 and 2024, respectively, where her expertise and professionalism truly stood out. It's rare to come across someone with Joy's level of dedication and capability. I	 do recommend her and the team at Sterling Experiences to anyone seeking innovative and reliable project management services.",
+    author: "Josh Ogundeji, Innovation and Ventures Manager, Ubulu Africa",
+  },
+  {
+    message:
+      "I had the pleasure of working with Joy on the 'Pitch2 Win 2023' project. Her expertise in event management shone through, making the entire process smooth and the event itself a great success. Joy is professional, creative, and a joy to work with. I highly recommend her for any top-tier event management.",
+    author: "Donald Akubudike, Audio Visual Engineer, Kontra Music Tech",
   },
 ];
 
@@ -67,7 +72,7 @@ const Testimonials = () => {
         <h1 className="text-[#0E0E12] text-[20px] font-[600] leading-[28px] tracking-[-0.02em]">
           What our clients say
         </h1>
-        <div className="relative mt-[18px] h-[120px] overflow-hidden">
+        <div className="relative mt-[18px] h-[180px] overflow-hidden">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}

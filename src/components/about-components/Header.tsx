@@ -11,7 +11,7 @@ const Header = () => {
       </div>
 
       <div className="space-y-[16px] md:px-[100px] my-[60px]">
-        <p className="font-openSans font-[400] text-[14px] md:text-[18px] leading-[16px] md:leading-[28px] tracking-[-0.02em] text-[#0E0E12]">
+        <p className="font-openSans font-[400] text-[14px] md:text-[18px] leading-[22px] md:leading-[28px] tracking-[-0.02em] text-[#0E0E12]">
           Sterling Experiences is an event management company based in Nigeria,
           that specializes in creating exceptional and memorable experiences for
           businesses. A company founded out of the captivation of the magic of
@@ -20,7 +20,7 @@ const Header = () => {
           non-profits and experience firsthand the transformative power of
           well-planned events.
         </p>
-        <p className="font-openSans font-[400] text-[14px] md:text-[18px] leading-[16px] md:leading-[28px] tracking-[-0.02em] text-[#0E0E12]">
+        <p className="font-openSans font-[400] text-[14px] md:text-[18px] leading-[22px] md:leading-[28px] tracking-[-0.02em] text-[#0E0E12]">
           Today, this passion has turned into a reality with Sterling
           Experiences. We specialize in crafting memorable corporate events that
           not only entertain but also achieve your business objectives. With

@@ -13,10 +13,12 @@ import OoBirthdayPage from "./pages/blog/OoBirthday";
 import KcBoysPage from "./pages/blog/KcBoys";
 import Omwg6Page from "./pages/blog/Omwg6";
 import Pitch2Win3Page from "./pages/blog/Pitch2Win3";
+import ScrollToTop from "./components/wrapper/ScrolltoTop";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
