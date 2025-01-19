@@ -25,7 +25,7 @@ const PastEvents = () => {
                 alt=""
               />
               <Link to="web-3-meetup">
-                <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+                <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
                   WEB3 MEETUP
                   <ArrowRight />
                 </button>
@@ -34,7 +34,7 @@ const PastEvents = () => {
             <div className="mt-[30px] flex flex-col items-center space-y-[20px]">
               <img src={InfotechImage} alt="" />
               <Link to="infotech-summit">
-                <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[200px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+                <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[200px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
                   INFOTECH SUMMIT
                   <ArrowRight />
                 </button>
@@ -47,7 +47,7 @@ const PastEvents = () => {
           <div className="flex flex-col items-center space-y-[20px]">
             <img src={OYMWGImage} alt="" />
             <Link to="oya-make-we-groove-7">
-              <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
                 OYAMAKEWEGROVE7
                 <ArrowRight />
               </button>
@@ -56,7 +56,7 @@ const PastEvents = () => {
           <div className="mt-[30px] flex flex-col items-center space-y-[20px]">
             <img src={Pitch2Win} alt="" />
             <Link to="pitch-2-win-4">
-              <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+              <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[185px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
                 PITCH2WIN4
                 <ArrowRight />
               </button>
@@ -69,7 +69,7 @@ const PastEvents = () => {
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={OoBirthday} alt="" />
           <Link to="oo-birthday">
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
               Oo'S 40TH BIRTHDAY
               <ArrowRight />
             </button>
@@ -78,7 +78,7 @@ const PastEvents = () => {
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={KcBoys} alt="" />
           <Link to="kc-tech">
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[250px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[250px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
               KC BOYS TECH EVENT
               <ArrowRight />
             </button>
@@ -87,7 +87,7 @@ const PastEvents = () => {
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={OyaMakeWeGroove6} alt="" />
           <Link to="oya-make-we-groove-6">
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
               OYAMAKEWEGROVE6
               <ArrowRight />
             </button>
@@ -96,7 +96,7 @@ const PastEvents = () => {
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={Pitch2Win3} alt="" />
           <Link to="pitch-2-win-3">
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
+            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
               PITCH2WIN3
               <ArrowRight />
             </button>

@@ -1,5 +1,6 @@
 import WhiteLogo from "../../assets/images/sterling-experiences-logo-white.png";
 import {
+  FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
   MailIcon,
@@ -11,20 +12,43 @@ const Footer = () => {
     <div className="flex items-center justify-center bg-[#800080]">
       <div className="flex flex-col md:flex-row items-center justify-between py-[40px] w-full max-w-[1300px] px-4 ">
         <div className="flex flex-col items-center gap-[26px]">
-          <img src={WhiteLogo} alt="" />
-          <div className="flex gap-[16px] ml-[50px]">
-            <InstagramIcon />
-            <LinkedinIcon />
-            <TelephoneIcon />
-            <MailIcon />
+          <img src={WhiteLogo} className="hidden md:block" alt="" />
+          <div className="flex items-center gap-[16px] md:ml-[50px]">
+            <a
+              href="https://www.instagram.com/sterling_experiences"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/sterling-xperiences/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedinIcon />
+            </a>
+            <a
+              href="https://www.facebook.com/sterlingxperiences"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon />
+            </a>
+            <a href="tel:+2347089300072">
+              <TelephoneIcon />
+            </a>
+            <a href="mailto:info@sterlingxperiences.com">
+              <MailIcon />
+            </a>
           </div>
         </div>
 
-        <div className="space-y-[16px]">
+        <div className="space-y-[16px] mt-[32px] md:mt-[0px] mb-[16px] md:mb-0">
           <h1 className="font-ebGaramond font-[500] md:font-[600] text-[36px] md:text-[48px] text-[#FFD700] leading-[43px] md:leading-[57px] tracking-[-0.04em] text-center md:text-left">
             Sign up for our Newsletter
           </h1>
-          <div className="flex flex-col space-y-[8px]">
+          <div className="flex flex-col space-y-[8px] py-[20px] md:py-[0px]">
             <label
               className="font-openSans font-[400] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5]"
               htmlFor="email"
@@ -39,7 +63,7 @@ const Footer = () => {
                 name="email"
                 id="email"
               />
-              <button className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px]">
+              <button className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
                 Submit
               </button>
             </div>
