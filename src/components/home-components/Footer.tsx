@@ -1,5 +1,6 @@
 import WhiteLogo from "../../assets/images/sterling-experiences-logo-white.png";
 import {
+  FacebookIcon,
   InstagramIcon,
   LinkedinIcon,
   MailIcon,
@@ -12,7 +13,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-center justify-between py-[40px] w-full max-w-[1300px] px-4 ">
         <div className="flex flex-col items-center gap-[26px]">
           <img src={WhiteLogo} className="hidden md:block" alt="" />
-          <div className="flex gap-[16px] md:ml-[50px]">
+          <div className="flex items-center gap-[16px] md:ml-[50px]">
             <a
               href="https://www.instagram.com/sterling_experiences"
               target="_blank"
@@ -26,6 +27,13 @@ const Footer = () => {
               rel="noreferrer"
             >
               <LinkedinIcon />
+            </a>
+            <a
+              href="https://www.facebook.com/sterlingxperiences"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FacebookIcon />
             </a>
             <a href="tel:+2347089300072">
               <TelephoneIcon />
