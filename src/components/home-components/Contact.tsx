@@ -3,6 +3,7 @@ import {
   BlackStarSmallIcon,
   YellowStarIcon,
 } from "../../assets/icons";
+import Calender from "../calender/Cal";
 
 const Contact = () => {
   return (
@@ -15,9 +16,9 @@ const Contact = () => {
           Send us a message today or book a free consultation
         </h1>
         <div className="flex items-center justify-center md:justify-start">
-          <button className="flex items-center justify-center gap-[8px] mt-[16px] md:mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-white transition">
-            Schedule free consultation
-          </button>
+          <div className="flex items-center justify-center gap-[8px] mt-[16px] md:mt-[8px] border border-[#800080] text-[#800080] rounded-[16px] px-[16px] py-[8px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-white transition">
+            <Calender title="Schedule free consultation" />
+          </div>
         </div>
         <span className="hidden md:block absolute top-[-40%] md:top-[150%] left-[80%] md:left-[30%] hover:left-[50%] hover:scale-150 transition-all duration-1000 ease-in-out">
           <BlackStarIcon />

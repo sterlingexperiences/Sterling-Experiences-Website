@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Logo from "../../assets/sterling-experiences-logo.png";
 import { NavLink } from "react-router"; // Correct import for NavLink
 import { CloseIcon, HamburgerIcon } from "../../assets/icons";
+import Calender from "../calender/Cal";
 
 const navLinks = [
   { name: "HOME", path: "/" },
@@ -85,12 +86,9 @@ const NavBar = () => {
 
       {/* Start Planning Button */}
       <div className="hidden md:flex">
-        <a
-          href="#"
-          className="font-[600] text-[16px] leading-[22px] tracking-[-0.02em] rounded-[10px] px-[16px] py-[8px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition"
-        >
-          Start Planning
-        </a>
+        <div className="font-[600] text-[16px] leading-[22px] tracking-[-0.02em] rounded-[10px] px-[16px] py-[8px] border border-[#800080] text-[#800080] hover:bg-[#800080] hover:text-white transition">
+          <Calender title="Start Planning" />
+        </div>
       </div>
 
       {/* Hamburger Icon */}
