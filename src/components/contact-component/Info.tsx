@@ -27,13 +27,13 @@ const Info = () => {
         </div>
         <div>
           <a
-            href="mailto:info@sterlingxperiences.com"
+            href="mailto:joy@sterlingxperiences.com"
             className="hover:underline"
           >
             <div className="flex items-center gap-[16px]">
               <MailIcon color="#800080" />
               <p className="font-openSans font-[400] text-[16px] md:text-[18px] leading-[22px] md:leading-[25px] text-[#0E0E12] tracking-[-0.02em]">
-                sterlingxperience@gmail.com
+                joy@sterlingxperiences.com
               </p>
             </div>
           </a>

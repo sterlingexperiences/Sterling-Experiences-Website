@@ -1,3 +1,5 @@
+import Calender from "../calender/Cal";
+
 const WhatWeDo = () => {
   return (
     <div className="whatWeDo_bg">
@@ -13,9 +15,9 @@ const WhatWeDo = () => {
             <li>Venue Selection Management</li>
             <li>Event Evaluation and Reporting</li>
           </ul>
-          <button className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
-            Start planning
-          </button>
+          <div className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
+            <Calender title="Start planning" />
+          </div>
         </div>
 
         <div className="flex flex-col h-fit my-auto border border-[#800080] rounded-[16px] px-[32px] md:px-[62px] py-[32px] md:py-[78px] w-full md:max-w-[524px] bg-white">
@@ -27,9 +29,9 @@ const WhatWeDo = () => {
             <li>Corporate Gifting</li>
             <li>Destination Management</li>
           </ul>
-          <button className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
-            Start planning
-          </button>
+          <div className="bg-[#800080] flex items-center justify-center h-[38px] lg:w-[408px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] mt-[30px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
+            <Calender title="Start planning" />
+          </div>
         </div>
       </div>
     </div>

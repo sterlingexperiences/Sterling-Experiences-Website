@@ -6,8 +6,40 @@ import {
   MailIcon,
   TelephoneIcon,
 } from "../../assets/icons";
+import { useState } from "react";
+import { supabase } from "../../Supabase";
+import { toast, ToastContainer } from "react-toastify";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+    setLoading(true);
+    try {
+      const { error } = await supabase
+        .from("Waitlist")
+        .insert({ email: email });
+
+      if (error) {
+        toast.error("Failed to submit. Please try again later.");
+        setLoading(false);
+        return;
+      }
+      toast.success("Successfully subscribed to newsletter!");
+      setLoading(false);
+      setEmail("");
+    } catch (err) {
+      toast.error("An unexpected error occurred");
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex items-center justify-center bg-[#800080]">
       <div className="flex flex-col md:flex-row items-center justify-between py-[40px] w-full max-w-[1300px] px-4 ">
@@ -38,7 +70,7 @@ const Footer = () => {
             <a href="tel:+2347089300072">
               <TelephoneIcon />
             </a>
-            <a href="mailto:info@sterlingxperiences.com">
+            <a href="mailto:joy@sterlingxperiences.com">
               <MailIcon />
             </a>
           </div>
@@ -53,7 +85,7 @@ const Footer = () => {
               className="font-openSans font-[400] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5]"
               htmlFor="email"
             >
-              Email Adress
+              Email Address
             </label>
 
             <div className="flex relative">
@@ -62,9 +94,15 @@ const Footer = () => {
                 type="email"
                 name="email"
                 id="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
-                Submit
+              <button
+                onClick={handleSubmit}
+                className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out"
+              >
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
           </div>
@@ -74,6 +112,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
