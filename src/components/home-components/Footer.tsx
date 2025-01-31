@@ -6,8 +6,33 @@ import {
   MailIcon,
   TelephoneIcon,
 } from "../../assets/icons";
+import { useState } from "react";
+import { supabase } from "../../Supabase";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    try {
+      const { error } = await supabase
+        .from("Waitlist")
+        .insert({ email: email });
+
+      if (error) {
+        alert("Failed to submit: " + error.message);
+        return;
+      }
+
+      alert("Successfully subscribed to newsletter!");
+      setEmail(""); // Clear the input field
+    } catch (err) {
+      alert("An unexpected error occurred");
+      console.error(err);
+    }
+  };
+
   return (
     <div className="flex items-center justify-center bg-[#800080]">
       <div className="flex flex-col md:flex-row items-center justify-between py-[40px] w-full max-w-[1300px] px-4 ">
@@ -53,7 +78,7 @@ const Footer = () => {
               className="font-openSans font-[400] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5]"
               htmlFor="email"
             >
-              Email Adress
+              Email Address
             </label>
 
             <div className="flex relative">
@@ -62,8 +87,13 @@ const Footer = () => {
                 type="email"
                 name="email"
                 id="email"
+                placeholder="Enter your email"
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <button className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
+              <button
+                onClick={handleSubmit}
+                className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out"
+              >
                 Submit
               </button>
             </div>
