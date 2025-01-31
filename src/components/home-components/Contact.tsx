@@ -16,13 +16,46 @@ const Contact = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [disabled, setDisabled] = useState(true);
 
   const handleChange = (e: any) => {
     setData({ ...data, [e.target.name]: e.target.value });
+    setDisabled(!data.name || !data.email || !data.number || !data.message);
   };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+
+    // Validate email format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    // Validate phone number (basic format)
+    const phoneRegex = /^\+?[\d\s-]{10,}$/;
+    if (!phoneRegex.test(data.number)) {
+      toast.error("Please enter a valid phone number");
+      return;
+    }
+
+    // Validate other fields
+    if (!data.name.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+
+    if (!data.message.trim()) {
+      toast.error("Please enter a message");
+      return;
+    }
+
+    if (data.message.trim().length < 10) {
+      toast.error("Message should be at least 10 characters long");
+      return;
+    }
+
     setLoading(true);
     try {
       const { error } = await supabase.from("Inquiry").insert(data);
@@ -138,7 +171,10 @@ const Contact = () => {
 
         <button
           onClick={handleSubmit}
-          className="flex items-center justify-center w-full py-[8px] border border-[#800080] text-[#800080] rounded-[16px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]"
+          disabled={disabled}
+          className={`flex items-center justify-center w-full py-[8px] border border-[#800080] text-[#800080] rounded-[16px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] ${
+            disabled ? "opacity-50 cursor-not-allowed" : ""
+          }`}
         >
           {loading ? "Submitting..." : "Submit"}
         </button>
