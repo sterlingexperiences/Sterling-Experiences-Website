@@ -37,7 +37,6 @@ const Footer = () => {
     } catch (err) {
       toast.error("An unexpected error occurred");
       setLoading(false);
-      console.error(err);
     }
   };
 
@@ -71,7 +70,7 @@ const Footer = () => {
             <a href="tel:+2347089300072">
               <TelephoneIcon />
             </a>
-            <a href="mailto:info@sterlingxperiences.com">
+            <a href="mailto:joy@sterlingxperiences.com">
               <MailIcon />
             </a>
           </div>
