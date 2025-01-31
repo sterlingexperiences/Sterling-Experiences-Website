@@ -1,11 +1,52 @@
+import { useState } from "react";
 import {
   BlackStarIcon,
   BlackStarSmallIcon,
   YellowStarIcon,
 } from "../../assets/icons";
 import Calender from "../calender/Cal";
+import { toast } from "react-toastify";
+import { supabase } from "../../Supabase";
 
 const Contact = () => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: any) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const { error } = await supabase.from("Inquiry").insert(data);
+
+      if (error) {
+        toast.error("Failed to submit. Please try again later.");
+        setLoading(false);
+        return;
+      }
+      toast.success("Successfully submitted");
+      setLoading(false);
+      setData({
+        name: "",
+        email: "",
+        number: "",
+        message: "",
+      });
+    } catch (err) {
+      toast.error("An unexpected error occurred");
+      setLoading(false);
+    }
+    console.log(data);
+  };
+
   return (
     <div className="flex flex-col gap-[40px] md:flex-row items-center my-[67px]">
       <div className="md:w-[50%] relative">
@@ -41,6 +82,8 @@ const Contact = () => {
             type="text"
             name="name"
             id="name"
+            onChange={handleChange}
+            value={data.name}
           />
         </div>
         <div className="flex flex-col space-y-[8px]">
@@ -55,6 +98,8 @@ const Contact = () => {
             type="email"
             name="email"
             id="email"
+            onChange={handleChange}
+            value={data.email}
           />
         </div>
         <div className="flex flex-col space-y-[8px]">
@@ -69,6 +114,8 @@ const Contact = () => {
             type="tel"
             name="number"
             id="number"
+            onChange={handleChange}
+            value={data.number}
           />
         </div>
         <div className="flex flex-col space-y-[8px]">
@@ -82,13 +129,18 @@ const Contact = () => {
             className="rounded-[16px] p-[20px]"
             name="message"
             id="message"
+            onChange={handleChange}
+            value={data.message}
             cols={30}
             rows={5}
           ></textarea>
         </div>
 
-        <button className="flex items-center justify-center w-full py-[8px] border border-[#800080] text-[#800080] rounded-[16px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]">
-          Submit
+        <button
+          onClick={handleSubmit}
+          className="flex items-center justify-center w-full py-[8px] border border-[#800080] text-[#800080] rounded-[16px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em]"
+        >
+          {loading ? "Submitting..." : "Submit"}
         </button>
       </div>
     </div>
