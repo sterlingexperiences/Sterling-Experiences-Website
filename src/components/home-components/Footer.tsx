@@ -8,27 +8,35 @@ import {
 } from "../../assets/icons";
 import { useState } from "react";
 import { supabase } from "../../Supabase";
+import { toast, ToastContainer } from "react-toastify";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+    setLoading(true);
     try {
       const { error } = await supabase
         .from("Waitlist")
         .insert({ email: email });
 
       if (error) {
-        alert("Failed to submit: " + error.message);
+        toast.error("Failed to submit. Please try again later.");
+        setLoading(false);
         return;
       }
-
-      alert("Successfully subscribed to newsletter!");
-      setEmail(""); // Clear the input field
+      toast.success("Successfully subscribed to newsletter!");
+      setLoading(false);
+      setEmail("");
     } catch (err) {
-      alert("An unexpected error occurred");
+      toast.error("An unexpected error occurred");
+      setLoading(false);
       console.error(err);
     }
   };
@@ -88,13 +96,14 @@ const Footer = () => {
                 name="email"
                 id="email"
                 placeholder="Enter your email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
               <button
                 onClick={handleSubmit}
                 className="absolute right-[11px] top-[7px] h-[38px] flex items-center justify-center bg-[#800080] text-[#F6F1E5] px-[16px] py-[8px] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out"
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
           </div>
@@ -104,6 +113,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
