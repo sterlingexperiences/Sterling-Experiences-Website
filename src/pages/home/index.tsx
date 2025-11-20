@@ -1,4 +1,5 @@
 import Contact from "../../components/home-components/Contact";
+import EventStaffing from "../../components/home-components/EventStaffing";
 import Footer from "../../components/home-components/Footer";
 import FromFunfairs from "../../components/home-components/FromFunfairs";
 import Hero from "../../components/home-components/Hero";
@@ -20,6 +21,7 @@ const Home = () => {
         <Layout>
           <FromFunfairs />
           <OurExpertise />
+          <EventStaffing />
           <Portfolio />
           <Contact />
         </Layout>
