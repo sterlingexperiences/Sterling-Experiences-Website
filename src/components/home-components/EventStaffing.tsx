@@ -14,12 +14,15 @@ const EventStaffing = () => {
             all kinds of events across Nigeria
           </p>
           <div className="mt-[40px] flex flex-col md:flex-row gap-4 items-center md:items-start justify-center md:justify-start">
-            <Link to="about-us">
+            <Link to="https://forms.gle/CK5SpzfcudtaZf7WA" target="_blank">
               <button className="bg-[#800080] flex items-center px-[16px] justify-center h-[38px] w-[200px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#F6F1E5] rounded-[16px] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out">
                 Hire event staff
               </button>
             </Link>
-            <Link to="about-us">
+            <Link
+              to="https://bit.ly/SterlingEventsStaffingRecruitment"
+              target="_blank"
+            >
               <button className="bg-[#F6F1E5] flex items-center px-[16px] justify-center h-[38px] w-[200px] font-[600] text-[16px] leading-[22px] tracking-[-0.02em] text-[#800080] rounded-[16px] hover:text-[#F6F1E5] hover:bg-[#a22ca2] transition-all duration-300 ease-in-out border border-[#800080]">
                 Join our event staff
               </button>
