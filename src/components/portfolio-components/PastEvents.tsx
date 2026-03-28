@@ -2,7 +2,6 @@ import Web3Image from "../../assets/images/web3-meetup.png";
 import InfotechImage from "../../assets/images/infotech.png";
 import OYMWGImage from "../../assets/images/oya-make-we-groove.png";
 import Pitch2Win from "../../assets/images/pitch-2-win.png";
-import OoBirthday from "../../assets/images/oo-birthday.png";
 import KcBoys from "../../assets/images/kc-tech.png";
 import OyaMakeWeGroove6 from "../../assets/images/oymwg6.png";
 import Pitch2Win3 from "../../assets/images/p2w3.png";
@@ -65,16 +64,7 @@ const PastEvents = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[100px] gap-y-[30px] border border-[#800080] rounded-[16px] px-[24px] md:px-[80px] py-[46px] md:py-[60px] mt-[30px]">
-        <div className="flex flex-col items-center space-y-[20px]">
-          <img src={OoBirthday} alt="" />
-          <Link to="oo-birthday">
-            <button className="flex items-center justify-center gap-[8px] border border-[#800080] text-[#800080] rounded-[16px] w-[220px] h-[40px] font-openSans font-[600] text-[16px] leading-[22px] tracking-[-0.02em] hover:bg-[#800080] hover:text-[#F6F1E5] transition-all duration-300 ease-in-out">
-              Oo'S 40TH BIRTHDAY
-              <ArrowRight />
-            </button>
-          </Link>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[100px] gap-y-[30px] border border-[#800080] rounded-[16px] px-[24px] md:px-[80px] py-[46px] md:py-[60px] mt-[30px]">
         <div className="flex flex-col items-center space-y-[20px]">
           <img src={KcBoys} alt="" />
           <Link to="kc-tech">
