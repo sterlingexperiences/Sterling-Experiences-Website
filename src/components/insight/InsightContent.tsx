@@ -1,11 +1,29 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-const articles = [
+type Article = {
+  slug: string;
+  title: string;
+  image: string;
+  imageAlt: string;
+  readTime: string;
+  body: string[];
+  quote: { text: string; source: string };
+  bodyAfterQuote: string[];
+  stats: string[];
+  sources: { label: string; url: string }[];
+};
+
+const articles: Article[] = [
   {
+    slug: "beyond-decor",
     title: "Beyond Decor: The Systems Behind Exceptional Events",
+    image: "/assets/insights/Beyond%20Decor.jpeg",
+    imageAlt: "Elegant event decor with ambient lighting and floral arrangements at a premium event setup",
+    readTime: "4 min read",
     body: [
       "Beautiful events are rarely remembered only because they looked good.",
       "Guests remember how smoothly they moved through registration, how quickly problems were solved, how clear communication felt, and how coordinated the overall experience appeared.",
@@ -32,7 +50,11 @@ const articles = [
     ],
   },
   {
+    slug: "operational-infrastructure",
     title: "Why Operational Infrastructure Matters in African Events",
+    image: "/assets/insights/Operational%20infrastructure.jpeg",
+    imageAlt: "Event operations team coordinating logistics and managing event production workflow",
+    readTime: "4 min read",
     body: [
       "One of the most overlooked challenges in the African events industry is operational infrastructure.",
       "Many events rely heavily on improvisation, fragmented coordination, and last-minute adjustments. While creativity often compensates temporarily, the long-term result is unnecessary pressure, avoidable losses, and inconsistent guest experience.",
@@ -58,7 +80,11 @@ const articles = [
     ],
   },
   {
+    slug: "what-guests-remember",
     title: "What Guests Actually Remember About an Event",
+    image: "/assets/insights/What%20guests%20remember.jpeg",
+    imageAlt: "Engaged event guests enjoying a live conference experience with warm ambient atmosphere",
+    readTime: "4 min read",
     body: [
       "Guests rarely remember every detail.",
       "They remember how the experience made them feel.",
@@ -84,7 +110,11 @@ const articles = [
     ],
   },
   {
+    slug: "corporate-conference-planning",
     title: "Planning a Corporate Conference Without Operational Chaos",
+    image: "/assets/insights/corporate.jpeg",
+    imageAlt: "Professional corporate conference setup with speakers, audience seating, and stage production",
+    readTime: "4 min read",
     body: [
       "Corporate conferences involve far more than speakers and venues.",
       "They require coordination across attendees, presenters, schedules, vendors, technical teams, transportation, hospitality, registration, and programme flow.",
@@ -201,10 +231,10 @@ const InsightContent = () => {
         </div>
 
         {/* Articles */}
-        <div className="space-y-16 md:space-y-24">
+        <div className="space-y-20 md:space-y-28">
           {articles.map((article, index) => (
             <ArticleCard
-              key={article.title}
+              key={article.slug}
               article={article}
               index={index}
               inView={inView}
@@ -217,7 +247,7 @@ const InsightContent = () => {
 };
 
 type ArticleCardProps = {
-  article: (typeof articles)[number];
+  article: Article;
   index: number;
   inView: boolean;
 };
@@ -245,125 +275,152 @@ const ArticleCard = ({ article, index, inView }: ArticleCardProps) => {
   const show = cardInView || inView;
 
   return (
-    <div
+    <article
       ref={cardRef}
       className={cn(
-        "rounded-[16px] p-6 md:p-10 border transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]",
+        "rounded-[16px] overflow-hidden border transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]",
         index % 2 === 0
           ? "bg-brand-purple/5 border-brand-purple/10"
           : "bg-brand-gold/10 border-brand-gold/20",
         show ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0",
       )}
     >
-      {/* Article headline */}
-      <h2
-        className={cn(
-          "font-ebGaramond text-[28px] md:text-[36px] font-[600] tracking-[-0.03em] leading-[1.3] transition-all duration-700 delay-100 ease-[cubic-bezier(0.4,0,0.2,1)]",
-          index % 2 === 0 ? "text-brand-purple" : "text-neutral-800",
-          show ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
-        )}
-      >
-        {article.title}
-      </h2>
+      {/* Featured image */}
+      <div className="relative w-full aspect-[21/9] md:aspect-[3/1] overflow-hidden bg-neutral-100">
+        <Image
+          src={article.image}
+          alt={article.imageAlt}
+          fill
+          sizes="(max-width: 768px) 100vw, 1300px"
+          className="object-cover transition-transform duration-500 ease-out motion-safe:hover:scale-105"
+          priority={index < 2}
+        />
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+      </div>
 
-      {/* Body paragraphs */}
-      <div className="mt-5 space-y-4">
-        {article.body.map((paragraph, i) => (
-          <p
-            key={i}
+      <div className="p-6 md:p-10">
+        {/* Article header */}
+        <header className="mb-6">
+          <div className="flex items-center gap-3 mb-3">
+            <time className="font-openSans text-[12px] md:text-[13px] text-neutral-400 tracking-wide uppercase">
+              {article.readTime}
+            </time>
+            <span className="size-1 rounded-full bg-brand-gold" />
+            <span className="font-openSans text-[12px] md:text-[13px] text-brand-purple/60 tracking-wide uppercase font-[500]">
+              Insight
+            </span>
+          </div>
+          <h2
             className={cn(
-              "font-openSans text-[15px] md:text-[16px] lg:text-[17px] text-neutral-700 leading-[1.75] tracking-[-0.01em] transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]",
-              show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
+              "font-ebGaramond text-[28px] md:text-[36px] font-[600] tracking-[-0.03em] leading-[1.3] transition-all duration-700 delay-100 ease-[cubic-bezier(0.4,0,0.2,1)]",
+              index % 2 === 0 ? "text-brand-purple" : "text-neutral-800",
+              show ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0",
             )}
-            style={{ transitionDelay: `${200 + i * 80}ms` }}
           >
-            {paragraph}
-          </p>
-        ))}
-      </div>
+            {article.title}
+          </h2>
+        </header>
 
-      {/* Blockquote */}
-      <div
-        className={cn(
-          "mt-6 pl-5 md:pl-8 border-l-[3px] border-brand-gold py-3 transition-all duration-700 delay-300 ease-[cubic-bezier(0.4,0,0.2,1)]",
-          show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
-        )}
-      >
-        <p className="font-ebGaramond italic text-[18px] md:text-[22px] text-brand-purple/80 leading-[1.4]">
-          &ldquo;{article.quote.text}&rdquo;
-        </p>
-        <p className="mt-2 font-openSans text-[14px] text-neutral-500 tracking-[-0.01em]">
-          <span className="text-brand-purple">Source: </span>{article.quote.source}
-        </p>
-      </div>
-
-      {/* Body after quote */}
-      {article.bodyAfterQuote && (
+        {/* Body paragraphs */}
         <div className="mt-5 space-y-4">
-          {article.bodyAfterQuote.map((paragraph, i) => (
+          {article.body.map((paragraph, i) => (
             <p
               key={i}
               className={cn(
                 "font-openSans text-[15px] md:text-[16px] lg:text-[17px] text-neutral-700 leading-[1.75] tracking-[-0.01em] transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]",
                 show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
               )}
-              style={{ transitionDelay: `${400 + i * 80}ms` }}
+              style={{ transitionDelay: `${200 + i * 80}ms` }}
             >
               {paragraph}
             </p>
           ))}
         </div>
-      )}
 
-      {/* Key Industry Statistics */}
-      <div
-        className={cn(
-          "mt-8 p-5 md:p-6 rounded-[12px] bg-brand-purple/5 border border-brand-purple/10 transition-all duration-700 delay-[500ms] ease-[cubic-bezier(0.4,0,0.2,1)]",
-          show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
-        )}
-      >
-        <h3 className="font-ebGaramond text-[18px] md:text-[22px] font-[600] text-brand-purple mb-4">
-          Key Industry Statistics
-        </h3>
-        <ul className="space-y-3">
-          {article.stats.map((stat, i) => (
-            <li
-              key={i}
-              className="flex items-start gap-3 font-openSans text-[14px] md:text-[15px] text-neutral-700 leading-[1.6]"
-            >
-              <span className="mt-[6px] size-[6px] shrink-0 rounded-full bg-brand-gold" />
-              <span>{stat}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+        {/* Blockquote */}
+        <div
+          className={cn(
+            "mt-6 pl-5 md:pl-8 border-l-[3px] border-brand-gold py-3 transition-all duration-700 delay-300 ease-[cubic-bezier(0.4,0,0.2,1)]",
+            show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
+          )}
+        >
+          <p className="font-ebGaramond italic text-[18px] md:text-[22px] text-brand-purple/80 leading-[1.4]">
+            &ldquo;{article.quote.text}&rdquo;
+          </p>
+          <p className="mt-2 font-openSans text-[14px] text-neutral-500 tracking-[-0.01em]">
+            <span className="text-brand-purple">Source: </span>{article.quote.source}
+          </p>
+        </div>
 
-      {/* Sources */}
-      <div
-        className={cn(
-          "mt-4 transition-all duration-700 delay-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]",
-          show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
-        )}
-      >
-        <p className="font-openSans text-[13px] md:text-[14px] text-neutral-400 tracking-[-0.01em] font-semibold mb-2">
-          Sources:
-        </p>
-        <ul className="space-y-1">
-          {article.sources.map((source, i) => (
-            <li key={i}>
-              <a
-                href={source.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-openSans text-[13px] md:text-[14px] text-brand-purple/60 hover:text-brand-purple transition-colors duration-200 hover:underline"
+        {/* Body after quote */}
+        {article.bodyAfterQuote && (
+          <div className="mt-5 space-y-4">
+            {article.bodyAfterQuote.map((paragraph, i) => (
+              <p
+                key={i}
+                className={cn(
+                  "font-openSans text-[15px] md:text-[16px] lg:text-[17px] text-neutral-700 leading-[1.75] tracking-[-0.01em] transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]",
+                  show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
+                )}
+                style={{ transitionDelay: `${400 + i * 80}ms` }}
               >
-                {source.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+
+        {/* Key Industry Statistics */}
+        <div
+          className={cn(
+            "mt-8 p-5 md:p-6 rounded-[12px] bg-brand-purple/5 border border-brand-purple/10 transition-all duration-700 delay-[500ms] ease-[cubic-bezier(0.4,0,0.2,1)]",
+            show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
+          )}
+        >
+          <h3 className="font-ebGaramond text-[18px] md:text-[22px] font-[600] text-brand-purple mb-4">
+            Key Industry Statistics
+          </h3>
+          <ul className="space-y-3">
+            {article.stats.map((stat, i) => (
+              <li
+                key={i}
+                className="flex items-start gap-3 font-openSans text-[14px] md:text-[15px] text-neutral-700 leading-[1.6]"
+              >
+                <span className="mt-[6px] size-[6px] shrink-0 rounded-full bg-brand-gold" />
+                <span>{stat}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Sources */}
+        <div
+          className={cn(
+            "mt-4 transition-all duration-700 delay-[600ms] ease-[cubic-bezier(0.4,0,0.2,1)]",
+            show ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
+          )}
+        >
+          <p className="font-openSans text-[13px] md:text-[14px] text-neutral-400 tracking-[-0.01em] font-semibold mb-2">
+            Sources:
+          </p>
+          <ul className="space-y-1">
+            {article.sources.map((source, i) => (
+              <li key={i}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-openSans text-[13px] md:text-[14px] text-brand-purple/60 hover:text-brand-purple transition-colors duration-200 hover:underline"
+                >
+                  {source.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </article>
   );
 };
 
