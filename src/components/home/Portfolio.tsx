@@ -68,7 +68,7 @@ const OurWork = () => {
 
       <div className="flex items-center justify-center mt-[30px]">
         <Button asChild variant="secondary" className="w-[250px] md:w-[408px]">
-          <Link href="portfolio">
+          <Link href="/work">
             View our Work
             <ArrowRight />
           </Link>
