@@ -309,6 +309,7 @@ function Dropdown({
 export default function BookingModal({ trigger }: BookingModalProps) {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [data, setData] = useState({
     name: "",
@@ -332,6 +333,17 @@ export default function BookingModal({ trigger }: BookingModalProps) {
 
     if (!data.name.trim()) {
       toast.error("Please enter your name");
+      return;
+    }
+
+    if (!data.email.trim()) {
+      toast.error("Please enter your email address");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+      toast.error("Please enter a valid email address");
       return;
     }
 
@@ -368,7 +380,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
       toast.success(
         "Your consultation request has been sent. We will be in touch within 24 hours.",
       );
-      setOpen(false);
+      setSubmitted(true);
       setSelectedDate(null);
       setData({
         name: "",
@@ -402,7 +414,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
   ];
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) setSubmitted(false); }}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent aria-describedby={undefined} className="sm:max-w-[520px] p-0 gap-0 bg-[#F5F0E4] border-neutral-200 rounded-xl overflow-hidden flex flex-col max-h-[85vh]">
         <VisuallyHidden>
@@ -419,8 +431,32 @@ export default function BookingModal({ trigger }: BookingModalProps) {
           </p>
         </div>
 
-        {/* Scrollable form body */}
-        <div className="overflow-y-auto flex-1 px-6 py-5">
+        {/* Scrollable body */}
+        <div className="overflow-y-auto flex-1 px-6 py-5 modal-scroll-content">
+          {submitted ? (
+            <div className="flex flex-col items-center text-center py-8 px-2">
+              <div className="w-[64px] h-[64px] rounded-full bg-brand-gold/20 flex items-center justify-center mx-auto mb-5">
+                <span className="text-[32px] text-brand-purple font-bold leading-none">
+                  &#10003;
+                </span>
+              </div>
+              <h3 className="font-ebGaramond text-[24px] font-[500] text-brand-purple leading-tight">
+                Request Sent
+              </h3>
+              <p className="font-openSans text-[14px] text-neutral-600 mt-2 leading-[1.6] max-w-[320px]">
+                Thank you, {data.name}. We have received your consultation request
+                and will be in touch within 24 hours.
+              </p>
+              <Button
+                type="button"
+                variant="primary"
+                onClick={() => { setOpen(false); setSubmitted(false); }}
+                className="w-full mt-8 h-[50px] text-[15px] font-[500]"
+              >
+                Close
+              </Button>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="space-y-[18px]">
             {/* Name */}
             <div className="flex flex-col space-y-[5px]">
@@ -585,6 +621,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
               )}
             </Button>
           </form>
+          )}
         </div>
       </DialogContent>
     </Dialog>

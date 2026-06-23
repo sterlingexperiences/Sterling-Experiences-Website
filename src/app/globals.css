@@ -84,6 +84,10 @@
   }
 }
 
+html {
+  overscroll-behavior-y: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -93,6 +97,47 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.65;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F6F1E5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #800080;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #660066;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #800080 #F6F1E5;
+}
+
+/* ── Modal scroll area ── */
+.modal-scroll-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-scroll-content::-webkit-scrollbar-track {
+  background: #F6F1E5;
+  border-radius: 3px;
+}
+
+.modal-scroll-content::-webkit-scrollbar-thumb {
+  background: #800080;
+  border-radius: 3px;
 }
 
 h1, h2, h3, h4, h5, h6 {
