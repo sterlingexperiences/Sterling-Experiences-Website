@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "react-toastify";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { Calendar, Users, Building2, Tag, DollarSign, ClipboardList, ChevronDown, Loader2 } from "lucide-react";
+import { Calendar, Users, Building2, Tag, Mail, ClipboardList, ChevronDown, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type BookingModalProps = {
@@ -312,6 +312,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const [data, setData] = useState({
     name: "",
+    email: "",
     organisation: "",
     eventType: "",
     guestCount: "",
@@ -347,6 +348,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
         body: JSON.stringify({
           type: "booking",
           name: data.name,
+          userEmail: data.email,
           organisation: data.organisation,
           eventType: data.eventType,
           date: dateStr,
@@ -370,6 +372,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
       setSelectedDate(null);
       setData({
         name: "",
+        email: "",
         organisation: "",
         eventType: "",
         guestCount: "",
@@ -453,6 +456,24 @@ export default function BookingModal({ trigger }: BookingModalProps) {
               </div>
             </div>
 
+            {/* Email */}
+            <div className="flex flex-col space-y-[5px]">
+              <Label className="font-openSans text-[13px] font-[500] text-neutral-800">
+                Email <span className="text-red-500">*</span>
+              </Label>
+              <div className="relative">
+                <Mail className={iconClasses} />
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  value={data.email}
+                  onChange={handleChange}
+                  className={inputClasses}
+                />
+              </div>
+            </div>
+
             {/* Event Type */}
             <div className="flex flex-col space-y-[5px]">
               <Label className="font-openSans text-[13px] font-[500] text-neutral-800">
@@ -521,7 +542,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
                 Budget Range
               </Label>
               <div className="relative">
-                <DollarSign className={iconClasses} />
+                <span className={cn(iconClasses, "text-[16px] font-[600]")}>&#8358;</span>
                 <Input
                   name="budgetRange"
                   placeholder="e.g. N500,000 - N1,000,000"

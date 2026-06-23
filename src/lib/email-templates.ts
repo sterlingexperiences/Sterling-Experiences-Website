@@ -23,7 +23,7 @@ function wrapper(content: string): string {
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
           <!-- Header -->
           <tr>
-            <td style="background-color:${BRAND.purple};padding:32px 40px;border-radius:12px 12px 0 0;text-align:center;">
+            <td style="background-color:${BRAND.champagne};padding:32px 40px;border-radius:12px 12px 0 0;text-align:center;">
               <img src="${BRAND.logoUrl}" alt="${BRAND.name}" style="height:38px;width:auto;max-width:180px;" />
               <div style="height:2px;width:60px;background-color:${BRAND.gold};margin:16px auto 0;"></div>
             </td>
