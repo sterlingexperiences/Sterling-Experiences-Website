@@ -10,6 +10,9 @@ import { toast } from "react-toastify";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Calendar, Users, Building2, Tag, Mail, ClipboardList, ChevronDown, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import TurnstileWidget from "@/components/ui/turnstile-widget";
+
+const HAS_TURNSTILE = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 type BookingModalProps = {
   trigger: ReactNode;
@@ -311,6 +314,9 @@ export default function BookingModal({ trigger }: BookingModalProps) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [timingToken, setTimingToken] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -321,6 +327,17 @@ export default function BookingModal({ trigger }: BookingModalProps) {
     budgetRange: "",
     additionalNotes: "",
   });
+
+  // Generate timing token when modal opens (bot protection)
+  const handleOpenChange = (v: boolean) => {
+    setOpen(v);
+    if (v) {
+      setTimingToken(btoa(String(Date.now())));
+      setHoneypot("");
+      setTurnstileToken("");
+    }
+    if (!v) setSubmitted(false);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -368,6 +385,9 @@ export default function BookingModal({ trigger }: BookingModalProps) {
           servicesRequired: data.servicesRequired,
           budgetRange: data.budgetRange,
           additionalNotes: data.additionalNotes,
+          _hp: honeypot,
+          _t: timingToken,
+          "cf-turnstile-response": turnstileToken,
         }),
       });
 
@@ -414,7 +434,7 @@ export default function BookingModal({ trigger }: BookingModalProps) {
   ];
 
   return (
-    <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) setSubmitted(false); }}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent aria-describedby={undefined} className="sm:max-w-[520px] p-0 gap-0 bg-[#F5F0E4] border-neutral-200 rounded-xl overflow-hidden flex flex-col max-h-[85vh]">
         <VisuallyHidden>
@@ -458,6 +478,32 @@ export default function BookingModal({ trigger }: BookingModalProps) {
             </div>
           ) : (
           <form onSubmit={handleSubmit} className="space-y-[18px]">
+            {/* Honeypot — invisible to humans, bots auto-fill it */}
+            <div
+              style={{
+                position: "absolute",
+                left: "-9999px",
+                opacity: 0,
+                height: 0,
+                width: 0,
+                overflow: "hidden",
+                pointerEvents: "none",
+              }}
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <Label htmlFor="hp-booking">Leave this empty</Label>
+              <Input
+                id="hp-booking"
+                name="_hp"
+                type="text"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+                autoComplete="off"
+                tabIndex={-1}
+              />
+            </div>
+
             {/* Name */}
             <div className="flex flex-col space-y-[5px]">
               <Label className="font-openSans text-[13px] font-[500] text-neutral-800">
@@ -604,11 +650,22 @@ export default function BookingModal({ trigger }: BookingModalProps) {
               />
             </div>
 
+            {/* Cloudflare Turnstile verification */}
+            {HAS_TURNSTILE && (
+              <div className="pt-1">
+                <TurnstileWidget
+                  onVerify={(token) => setTurnstileToken(token)}
+                  onExpire={() => setTurnstileToken("")}
+                  size="compact"
+                />
+              </div>
+            )}
+
             {/* Submit */}
             <Button
               type="submit"
               variant="primary"
-              disabled={loading}
+              disabled={loading || (HAS_TURNSTILE && !turnstileToken)}
               className="w-full h-[50px] text-[15px] font-[500]"
             >
               {loading ? (

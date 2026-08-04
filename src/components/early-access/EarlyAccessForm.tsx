@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,11 +8,22 @@ import { Label } from "@/components/ui/label";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { Mail, Phone, User, Loader2 } from "lucide-react";
+import TurnstileWidget from "@/components/ui/turnstile-widget";
+
+const HAS_TURNSTILE = !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export default function EarlyAccessForm() {
   const [data, setData] = useState({ name: "", email: "", phone: "" });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [timingToken, setTimingToken] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+
+  // Generate timing token on mount (bots skip this)
+  useEffect(() => {
+    setTimingToken(btoa(String(Date.now())));
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -43,6 +54,9 @@ export default function EarlyAccessForm() {
           name: data.name,
           email: data.email,
           phone: data.phone,
+          _hp: honeypot,
+          _t: timingToken,
+          "cf-turnstile-response": turnstileToken,
         }),
       });
 
@@ -137,6 +151,32 @@ export default function EarlyAccessForm() {
           ) : (
             <div className="bg-white rounded-[16px] p-6 md:p-8 shadow-xl shadow-black/10 border border-brand-purple/10">
               <form onSubmit={handleSubmit} className="space-y-[18px]">
+                {/* Honeypot — invisible to humans, bots auto-fill it */}
+                <div
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    opacity: 0,
+                    height: 0,
+                    width: 0,
+                    overflow: "hidden",
+                    pointerEvents: "none",
+                  }}
+                  aria-hidden="true"
+                  tabIndex={-1}
+                >
+                  <Label htmlFor="hp-waitlist">Leave this empty</Label>
+                  <Input
+                    id="hp-waitlist"
+                    name="_hp"
+                    type="text"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                    autoComplete="off"
+                    tabIndex={-1}
+                  />
+                </div>
+
                 {/* Full Name */}
                 <div className="flex flex-col space-y-[6px]">
                   <Label className="font-openSans text-[14px] font-[500] text-neutral-800">
@@ -190,10 +230,21 @@ export default function EarlyAccessForm() {
                   </div>
                 </div>
 
+                {/* Cloudflare Turnstile verification */}
+                {HAS_TURNSTILE && (
+                  <div className="pt-1">
+                    <TurnstileWidget
+                      onVerify={(token) => setTurnstileToken(token)}
+                      onExpire={() => setTurnstileToken("")}
+                      size="normal"
+                    />
+                  </div>
+                )}
+
                 <Button
                   type="submit"
                   variant="primary"
-                  disabled={loading}
+                  disabled={loading || (HAS_TURNSTILE && !turnstileToken)}
                   className="w-full h-[52px] text-[15px] font-[500] mt-2"
                 >
                   {loading ? (
